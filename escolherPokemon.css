@@ -1,0 +1,91 @@
+body
+{
+    background-color: #252121;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    margin: 25px;
+}
+
+h1
+{
+    font-size: 80px;
+    padding: 10px;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img
+{
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    margin: -10px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.container img:hover
+{
+    transform: scale(1.1);
+}
+
+.pokeCard {
+    background-color: #333333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px; /* Define um tamanho fixo */
+    height: 500px; /* Altura igual para todas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+}
+
+h2
+{
+    padding: -20px;
+}
+
+.pokeCard h3
+{
+    margin: 0px;
+    margin-top: -30px;
+    padding: 1px;
+}
+
+
+.pokeCard p
+{
+    font-size: 20px;
+    width: 100%;
+    margin: 60px;
+    text-align: justify;
+   
+}
+
+.pokeCard-corpo
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+div.tipos h4
+{
+    border-style: solid;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    margin: 10px;
+    margin-top: 10px;
+    display: inline-block; /* Ensures items are displayed side by side */
+}
