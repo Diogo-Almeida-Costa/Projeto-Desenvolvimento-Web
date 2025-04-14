@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Meus Times </h1>
 
     <div class="novoTimeContainer">
         <button id="novoTimeBtn"> + Novo Time </button>
@@ -21,19 +20,96 @@
         </form>
     </section>-->
 
+    <h1 class="tituloPagina"> Seus Times </h1>
+
     <div class="timesContainer">
+
         <div class="timeCard">
             <div class="cardHeader">
                 <h3> TIme A </h3>
-                <button class="deleteBtn" title="Excluir Time"> X </button>         
+                <button class="deleteBtn" title="Excluir Time"> &#10006 </button>         
             </div>
 
             <div class="pokemonIcons">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Pokemon 1">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Pokemon 2">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Pokemon 3">
+
+                <div class="pokemonItem">
+
+                    <div class="typeBadge planta">🍃</div>
+                    <div class="typeBadge veneno">☠️</div>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Pokemon 1">
+                    <div class="pokemonInfo">
+                        <span class="nomePokemon"> Bulbasaur </span>
+                        <span class="pokemonNumero"> #01 </span>
+                    </div>
+
+                </div>
+
+                <div class="pokemonItem">
+                
+                    <div class="typeBadge fogo">🔥</div>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Pokemon 2">
+                    <div class="pokemonInfo">
+                        <span class="nomePokemon"> Charmander </span>
+                        <span class="pokemonNumero"> #02 </span>
+                    </div>
+
+                </div>
+
+                <div class="pokemonItem">
+
+                    <div class="typeBadge agua"> 💧 </div>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Pokemon 3">
+                    <div class="pokemonInfo">
+                        <span class="nomePokemon"> Squirtle </span>
+                        <span class="pokemonNumero"> #03 </span>
+                    </div>
+
+                </div>
             </div>
         </div>
+
+        <div class="timeCard">
+            <div class="cardHeader">
+              <h3>Time B</h3>
+              <button class="deleteBtn" title="Excluir Time">&#10006;</button>
+            </div>
+            <div class="pokemonIcons">
+
+                <div class="pokemonItem">
+                    <div> 
+                        <div class="typeBadge eletrico"> ⚡ </div>
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+                        <div class="pokemonInfo">
+                            <span class="nomePokemon"> Pikachu </span>
+                            <span class="pokemonNumero"> #01 </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pokemonItem">
+                    <div>
+                        <div class="typeBadge fada">🧚</div>
+                        <div class="typeBadge normal">⚪</div>
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png" alt="Jigglypuff">
+                        <div class="pokemonInfo">
+                            <span class="nomePokemon"> Jigglypuff </span>
+                            <span class="pokemonNumero"> #02 </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pokemonItem"> 
+
+                    <div class="typeBadge veneno">☠️</div>
+                    <div class="typeBadge fantasma">👻</div>
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" alt="Gengar">
+                    <div class="pokemonInfo">
+                        <span class="nomePokemon"> Gengar </span>
+                        <span class="pokemonNumero"> #03 </span>
+                    </div>
+                </div>
+            </div>
+          </div>
 
         <!--<div class="timeCard novoTime">
             <h3> Novo Time </h3>
