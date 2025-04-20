@@ -1,10 +1,21 @@
 body
 {
-    background-color: #252121;
+    background: linear-gradient(270deg, #FFCB05, #00721d, #FF0000, #01c0a7);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
     font-family: Arial, sans-serif;
     color: #ffffff;
     text-align: center;
     margin: 25px;
+
+    @keyframes gradientAnimation 
+    {
+        0% { background-position: 0% 50%; }
+        25% { background-position: 50% 50%; }
+        50% { background-position: 100% 50%; }
+        75% { background-position: 50% 50%; }
+        100% { background-position: 0% 50%; }
+    }
 }
 
 h1
@@ -35,8 +46,6 @@ h1
     transform: scale(1.1);
 }
 
-
-
 .pokeCard {
     background-color: #333333;
     border-radius: 10px;
@@ -50,6 +59,7 @@ h1
     justify-content: space-between;
     align-items: center;
     border-style: solid;
+    transition: border-image 0.5s ease-in-out;
 }
 
 h2

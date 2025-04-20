@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+.jersey-15-regular {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@keyframes animacaoFundo 
+{
+    0% 
+    {
+        background-color: #7cbe78;
+    }
+    10% 
+    {
+        background-color: #479947;
+    }
+    30% 
+    {
+        background-color: #1d5f1d;
+    }
+    60% 
+    {
+        background-color: #082708;
+    }
+    80% 
+    {
+        background-color: #164916;
+    }
+    100% 
+    {
+        background-color: #6bb66b;
+    }
+}
+
+body 
+{
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(360deg, #2e7e29, #4CAF50, #0c3616);
+    margin: 0px;
+}
+
+.pokemonsGrama {
+    border-radius: 20px;
+    background: linear-gradient(360deg, #4f9b49, #4CAF50, #024712);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container 
+{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.pokemonSelecionado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-image: url('../img/fundoPlantaPokemon.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.imagemPokemon 
+{
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.quadradoFundo 
+{
+    width: 500px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+img .quadradoFundo
+{
+    border-radius: 10px;
+}
+
+.descricaoPokemon 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    font-size: 24px;
+    padding: 15px;
+    background-color: rgb(109, 218, 88);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.descricaoPokemon h1
+{
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    font-family: 'Jersey 15', sans-serif; 
+    font-size: 410%;
+    font-weight: 400; /* Opcional: defina o peso da fonte */
+}
+
+.descricaoPokemon h1:hover 
+{
+    color: rgb(0, 70, 4);
+    transform: translateY(-5px);
+    transition: transform 0.6s ease; 
+}
+
+.descricaoPokemon h2 
+{
+    color: rgb(250, 250, 250);
+    margin: 0px;
+    text-align: center;
+    font-family: 'Jersey 15', sans-serif; 
+    font-size: 210%;
+    font-weight: 400; 
+}
+.descricaoPokemon h2:hover 
+{
+    color: rgb(0, 70, 4);
+    transform: translateY(-5px);
+    transition: transform 0.6s ease; 
+}
+
+.descricaoPokemon ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-link {
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: #065e0c;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background-color: #0a8f1d;
+}
+
+/* Media Queries para Responsividade*/
+
+@media (max-width: 768px) 
+{
+    .container 
+    {
+        width: 90%;
+    }
+
+    .descricaoPokemon 
+    {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .imagemPokemon 
+    {
+        width: 120px;
+        height: 160px;
+    }
+
+    .quadradoFundo 
+    {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 480px) 
+{
+    .descricaoPokemon 
+    {
+        font-size: 16px;
+    }
+
+    .imagemPokemon 
+    {
+        width: 100px;
+        height: 130px;
+    }
+
+    .quadradoFundo 
+    {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*Parte de felipe
+
+
+/*Seção Menu Superior*/
+.menu-superior img {
+    width: 100%;
+    height: 135px;
+    display: block;
+}
+
+.menu-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.botao-central {
+    position: absolute;
+    top: 60%;
+    left: 59%;
+    margin-top: 40px;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    padding: 0;
+}
+
+.botao-central img {
+    width: 300px;
+    height: auto;
+}
+
+/*-------------------*/
+
+
+/*Seção Menu Lateral*/
+.menu-lateral {
+    width: 135px;
+    background: linear-gradient(to bottom, #1e90ff, #0000aa);
+    height: 100vh;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 1; 
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    margin-bottom: 130px;
+    margin-top: 130px;
+}
+
+.menu-botao {
+    background-color: #333;
+    border-color: white;
+    color: white;
+    padding: 5px;
+    border-width: 3px;
+    border-radius: 50px;
+    font-size: 15px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.menu-botao.ativo {
+    background-color: hotpink;
+}
+/*-------------------*/
+
+/*Seção Avatar*/
+.avatar-container {
+    background: #459CFF;
+    border-radius: 50%;
+    padding: 15px;
+    border: 4px solid white;
+    position: absolute;
+    top: 10px;
+    left: 67px;
+    transform: translateX(-50%);
+    z-index: 4; 
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 0%;
+}
+/*-------------------*/
+
+/*Seção Ilustrativa*/
+.pokemon-img {
+    background-color: #77b255;
+    border-radius: 15px;
+    margin: 0px 0;
+    padding: 15px;
+    border: white solid;
+    border-width: 4px;
+    border-color: white;
+}
+  
+.pokemon-img img {
+    width: 80px;
+    height: 80px;
+}
+  
+.joystick-area {
+    margin-top: auto;
+    padding: 50px;
+}
+  
+.joystick-area img {
+    width: 125px;
+    height: auto;
+}
+/*-------------------*/
