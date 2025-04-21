@@ -8,26 +8,29 @@
 </head>
 
 <body>
-    <div class="menu-superior">
-        <img src="img/menu-superior.png" class="menu-superior img" />
+    
+        <!--MENU SUPERIOR-->
+        <div class="menu-superior" id="menu">
+            <img src="img/menu-superior.png" class="menu-superior img" />
+    
+            <!--BOTÃO COM NOME DO SITE-->
+            <a href="page1.html" class="botao-central">
+                <img src="img/PokeIndex.gif"/>
+            </a>
 
-        <!--BOTÃO COM NOME DO SITE-->
-        <a href="page1.html" class="botao-central">
-            <img src="img/DFPdex.gif"/>
-        </a>
+            <div class="avatar-container">
+                <img src="img/Logo - Pokedex.png" class="avatar" />
+            </div>
+        </div>
 
-    </div>
-
-       <!--LOGO CANTO SUPERIOR ESQUERDO-->
-       <div class="avatar-container">
-        <img src="img/Logo - Pokedex.png" class="avatar" />
-    </div>
+         <!--LOGO CANTO SUPERIOR ESQUERDO-->
+    
 
     <!--MENU LATERAL-->
     <aside class="menu-lateral">
         <!--NAV COM BOTÕES (OBS: SUBSTITUIR BUTTON POR "<a>")-->
         <nav class="menu">
-            <button class="menu-botao">FAZER LOGIN</button>
+            <a href="login.html" class="menu-botao">FAZER LOGIN</a>
             <button class="menu-botao">MEUS TIMES</button>
             <button class="menu-botao ativo">SOBRE</button>
         </nav>
@@ -43,94 +46,95 @@
         </div>
     </aside>
 
-    <div class="conteudo-principal">
-        <div class="container">
-            <div class="pokeCard" style="border-color: chartreuse;">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur">
-            <h3>Bulbasaur</h3>
-            <div class="tipos">
-                    <h4 style="background-color: rgb(34, 139, 34);">Planta</h4>
-                    <h4 style="background-color: rgb(128, 0, 128);">Veneno</h4>
+    
+        <div class="containerMain">
+            <div class="pokemonsResponsivos">
+                <div class="container">
+                    <div class="pokeCard" id="pokemonPlanta">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur">
+                    <h3>Bulbasaur</h3>
+                    <div class="tipos">
+                            <h4 style="background-color: rgb(34, 139, 34);">Planta</h4>
+                            <h4 style="background-color: rgb(128, 0, 128);">Veneno</h4>
+                        </div>
+                        <p>Bulbasaur é um Pokémon de tipo planta e veneno. Ele é conhecido por sua habilidade de absorver luz solar e usar essa energia para crescer.</p>
+                    </div>
+                    <div class="pokeCard" id="pokemonPlanta">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="Ivysaur">
+                        <h3>Ivysaur</h3>
+                        <div class="tipos">
+                            <h4 style="background-color: rgb(34, 139, 34);">Planta</h4>
+                            <h4 style="background-color: rgb(128, 0, 128);">Veneno</h4>
+                        </div>
+                        <p>Ivysaur é a evolução de Bulbasaur. Ele carrega um botão de flor em suas costas que cresce com o tempo.</p>
+                    </div>
+                    <div class="pokeCard" id="pokemonPlanta">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="Venusaur">
+                        <h3>Venusaur</h3>
+                        <div class="tipos">
+                            <h4 style="background-color: rgb(34, 139, 34);">Planta</h4>
+                            <h4 style="background-color: rgb(128, 0, 128);">Veneno</h4>
+                        </div>
+                        <p>Venusaur é um Pokémon de tipo planta e veneno. Ele é conhecido por sua habilidade de absorver luz solar e usar essa energia para crescer.</p>
+                    </div>
                 </div>
-                <p>Bulbasaur é um Pokémon de tipo planta e veneno. Ele é conhecido por sua habilidade de absorver luz solar e usar essa energia para crescer.</p>
             </div>
 
-            <div class="pokeCard" style="border-color: chartreuse;">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="Ivysaur">
-                <h3>Ivysaur</h3>
-                <div class="tipos">
-                    <h4 style="background-color: rgb(34, 139, 34);">Planta</h4>
-                    <h4 style="background-color: rgb(128, 0, 128);">Veneno</h4>
-                </div>
-                <p>Ivysaur é a evolução de Bulbasaur. Ele carrega um botão de flor em suas costas que cresce com o tempo.</p>
-            </div>
 
-            <div class="pokeCard" style="border-color: chartreuse;">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="Venusaur">
-                <h3>Venusaur</h3>
-                <div class="tipos">
-                    <h4 style="background-color: rgb(34, 139, 34);">Planta</h4>
-                    <h4 style="background-color: rgb(128, 0, 128);">Veneno</h4>
+            <div class="container">
+                <div class="pokeCard" id="pokemonFogo">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander">
+                    <h3>Charmander</h3>
+                    <div class="tipos">
+                        <h4 style="background-color: rgb(255, 69, 0);">Fogo</h4>
+                    </div>
+                    <p>Charmander é um Pokémon de tipo fogo. A chama na ponta de sua cauda indica sua saúde e humor.</p>
                 </div>
-                <p>Venusaur é um Pokémon de tipo planta e veneno. Ele é conhecido por sua habilidade de absorver luz solar e usar essa energia para crescer.</p>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="pokeCard" style="border-color: rgb(255, 102, 0);">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander">
-                <h3>Charmander</h3>
-                <div class="tipos">
-                    <h4 style="background-color: rgb(255, 69, 0);">Fogo</h4>
+                <div class="pokeCard" id="pokemonFogo">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" alt="Charmeleon">
+                    <h3>Charmeleon</h3>
+                    <div class="tipos">
+                        <h4 style="background-color: rgb(255, 69, 0);">Fogo</h4>
+                    </div>
+                    <p>Charmeleon é conhecido por sua natureza feroz e sua habilidade de liberar chamas intensas durante batalhas.</p>
                 </div>
-                <p>Charmander é um Pokémon de tipo fogo. A chama na ponta de sua cauda indica sua saúde e humor.</p>
-            </div>
-            <div class="pokeCard" style="border-color: rgb(255, 102, 0);">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" alt="Charmeleon">
-                <h3>Charmeleon</h3>
-                <div class="tipos">
-                    <h4 style="background-color: rgb(255, 69, 0);">Fogo</h4>
+        
+                <div class="pokeCard"id="pokemonFogoVoador">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="Charizard">
+                    <h3>Charizard</h3>
+                    <div class="tipos">
+                        <h4 style="background-color: rgb(255, 69, 0);">Fogo</h4>
+                        <h4 style="background-color: rgb(135, 206, 250);">Voador</h4>
+                    </div>
+                    <p>Charizard é um Pokémon poderoso que pode cuspir fogo quente o suficiente para derreter pedras.</p>
                 </div>
-                <p>Charmeleon é conhecido por sua natureza feroz e sua habilidade de liberar chamas intensas durante batalhas.</p>
             </div>
             
-            <div class="pokeCard" style="border-color: rgb(255, 102, 0);">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="Charizard">
-                <h3>Charizard</h3>
-                <div class="tipos">
-                    <h4 style="background-color: rgb(255, 69, 0);">Fogo</h4>
-                    <h4 style="background-color: rgb(135, 206, 250);">Voador</h4>
+            <div class="container">
+                <div class="pokeCard" id="pokemonAgua">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle">
+                    <h3>Squirtle</h3>
+                    <div class="tipos">
+                        <h4 style="background-color: rgb(0, 191, 255);">Água</h4>
+                    </div>
+                    <p>Squirtle é um Pokémon de tipo água que usa sua concha para proteção e pode disparar jatos de água com precisão.</p>
                 </div>
-                <p>Charizard é um Pokémon poderoso que pode cuspir fogo quente o suficiente para derreter pedras.</p>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="pokeCard" style="border-color: rgb(0, 119, 255);">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle">
-                <h3>Squirtle</h3>
-                <div class="tipos">
-                    <h4 style="background-color: rgb(0, 191, 255);">Água</h4>
+                <div class="pokeCard"id="pokemonAgua">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png" alt="Wartortle">
+                    <h3>Wartortle</h3>
+                    <div class="tipos">
+                        <h4 style="background-color: rgb(0, 191, 255);">Água</h4>
+                    </div>
+                    <p>Wartortle é conhecido por sua cauda peluda e sua habilidade de nadar rapidamente em águas profundas.</p>
                 </div>
-                <p>Squirtle é um Pokémon de tipo água que usa sua concha para proteção e pode disparar jatos de água com precisão.</p>
-            </div>
-
-            <div class="pokeCard" style="border-color: rgb(0, 119, 255);">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png" alt="Wartortle">
-                <h3>Wartortle</h3>
-                <div class="tipos">
-                    <h4 style="background-color: rgb(0, 191, 255);">Água</h4>
+                <div class="pokeCard" id="pokemonAgua">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="Blastoise">
+                    <h3>Blastoise</h3>
+                    <div class="tipos">
+                        <h4 style="background-color: rgb(0, 191, 255);">Água</h4>
+                    </div>
+                    <p>Blastoise é um Pokémon de tipo água que possui canhões em sua carapaça, capazes de disparar jatos de água com enorme força.</p>
                 </div>
-                <p>Wartortle é conhecido por sua cauda peluda e sua habilidade de nadar rapidamente em águas profundas.</p>
-            </div>
-
-            <div class="pokeCard" style="border-color: rgb(0, 119, 255);">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="Blastoise">
-                <h3>Blastoise</h3>
-                <div class="tipos">
-                    <h4 style="background-color: rgb(0, 191, 255);">Água</h4>
-                </div>
-                <p>Blastoise é um Pokémon de tipo água que possui canhões em sua carapaça, capazes de disparar jatos de água com enorme força.</p>
             </div>
         </div>
     </div>

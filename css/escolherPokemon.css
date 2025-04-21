@@ -1,47 +1,40 @@
-body
+body 
 {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
-    background-image: url("../img/background.png");
+    background-image: url("img/background.png");
     background-size: 400% 400%;
     animation: gradientAnimation 5s ease infinite;
     font-family: Arial, sans-serif;
     color: #ffffff;
-    @keyframes gradientAnimation 
-    {
-        0% { background-position: 0% 50%; }
-        25% { background-position: 50% 50%; }
-        50% { background-position: 100% 50%; }
-        75% { background-position: 50% 50%; }
-        100% { background-position: 0% 50%; }
-    }
 }
 
-h1
+.containerMain
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 230vh; 
+    margin-left: 20vh;
+}
+
+h1 {
     font-size: 80px;
     padding: 10px;
+    text-align: center;
 }
 
-.conteudoPrincipal
-{
-    margin: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh; /* Full height of the viewport */
-}
-
-.container
+.container 
 {
     display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
     justify-content: center;
-    align-items: center;
+    gap: 20px; /* Espaçamento entre os cards */
 }
 
-.container img
-{
+.container img {
     width: 100%;
     max-width: 200px;
     height: 200px;
@@ -50,82 +43,102 @@ h1
     transition: transform 0.2s;
 }
 
-.container img:hover
-{
+.container img:hover {
     transform: scale(1.1);
 }
 
-.pokeCard {
+.pokeCard 
+{
     background-color: #333333;
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 400px; /* Define um tamanho fixo */
-    height: 500px; /* Altura igual para todas */
+    width: 300px; 
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-style: solid;
-    transition: border-image 0.5s ease-in-out;
+    border: 2px solid transparent;
+    transition: border-color 0.5s ease-in-out;
 }
 
-h2
-{
-    padding: -20px;
+/* Estilos para hover em diferentes tipos de Pokémon */
+.pokeCard:hover#pokemonPlanta {
+    background: linear-gradient(360deg, #441258, #0dbd56, #035c30);
+    transition: background 0.1s ease-in;
 }
 
-.pokeCard h3
-{
-    margin: 0px;
-    margin-top: -30px;
-    padding: 1px;
+.pokeCard:hover#pokemonFogo {
+    background: linear-gradient(360deg, #f17143, #f04324, #8b0000);
+    transition: background 0.5s ease-in-out;
 }
 
+.pokeCard:hover#pokemonFogoVoador {
+    background: linear-gradient(360deg, #3dc7f1, #ff6347, #8b0000);
+    transition: background 0.5s ease-in-out;
+}
 
-.pokeCard p
-{
-    font-size: 20px;
+.pokeCard:hover#pokemonAgua {
+    background: linear-gradient(360deg, #1e90ff, #00bfff, #00008b);
+    transition: background 0.5s ease-in-out;
+}
+
+.pokeCard h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.pokeCard p {
+    font-size: 16px;
     width: 100%;
-    margin: 60px;
+    margin: 20px 0;
     text-align: justify;
-   
 }
 
-.pokeCard-corpo
-{
+.pokeCard-corpo {
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
 
-div.tipos h4
-{
-    border-style: solid;
+div.tipos h4 {
+    border: 2px solid white;
     border-radius: 10px;
     padding: 5px;
     width: 100px;
     margin: 10px;
-    margin-top: 10px;
-    display: inline-block; /* Ensures items are displayed side by side */
+    text-align: center;
+    background-color: #77b255;
+    color: white;
+    font-size: 14px;
 }
-
 /*Seção Menu Superior*/
-.menu-superior img 
-{
-    position: fixed;
+.menu-superior#menu{
     width: 100%;
     height: 135px;
     display: block;
 }
 
+.menu-superior {
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 135px;
+    z-index: 2;
+}
+
 .botao-central 
 {
     position: absolute;
-    top: 0%; /* Ajuste para posicionar na parte superior */
-    left: 50%;
-    transform: translate(-50%, -10%); /* Centraliza horizontalmente */
+    top: 0%;
+    left: 58%;
+    margin-top: 40px;
+    transform: translate(-50%, -50%);
     background: none;
     border: none;
     cursor: pointer;
@@ -133,13 +146,11 @@ div.tipos h4
     padding: 0;
 }
 
-.botao-central img 
-{
-    position: fixed;
-    width: 250px;
-    height: 150px;
-    transition: transform 0.2s;
+.botao-central img {
+    width: 300px;
+    height: auto;
 }
+
 
 /*Seção Menu Lateral*/
 .menu-lateral {
@@ -169,10 +180,11 @@ div.tipos h4
     color: white;
     padding: 5px;
     border-width: 3px;
-    border-radius: 50px;
+    border-radius: 40px;
     font-size: 15px;
     width: 120px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .menu-botao.ativo {
@@ -181,11 +193,10 @@ div.tipos h4
 /*-------------------*/
 
 /*Seção Avatar*/
-.avatar-container 
-{
+.avatar-container {
     background: #459CFF;
     border-radius: 50%;
-    padding: 15px;
+    padding: 0px;
     border: 4px solid white;
     position: absolute;
     top: 10px;
@@ -194,12 +205,13 @@ div.tipos h4
     z-index: 4; 
 }
 
-.avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 0%;
+.avatar 
+{
+    width: 80px; /* Ajustado para um tamanho proporcional */
+    height: 80px; /* Ajustado para um tamanho proporcional */
+    border-radius: 50%; /* Tornar o avatar circular */
 }
-
+/*-------------------*/
 
 /*Seção Ilustrativa*/
 .pokemon-img {
@@ -227,3 +239,104 @@ div.tipos h4
     height: auto;
 }
 /*-------------------*/
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 480px) {
+    .menu-lateral {
+        width: 80px;
+    }
+
+    .menu-botao 
+    {
+        font-size: 10px;
+        width: 80px;
+    }
+
+    .menu-superior
+    {
+        height: 15vh;
+    }
+
+
+    .conteudoPrincipal 
+    {
+        width: 300px;
+        margin-left: 150px;
+        padding-top: 150px; /* Adicionado para criar distância do topo */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .avatar
+    {
+        display: none;
+    }
+
+    .avatar-container
+    {
+        display: none;
+    }
+
+    .pokemon-img
+    {
+        padding: 5px;
+    }
+
+    .joystick-area img
+    {
+        width: 80px;
+    }
+
+    .botao-central
+    {
+        position: absolute;   
+        left: 50vw;
+     }
+
+    .pokemon-img img
+    {
+        width: 0
+    }
+    
+
+    .pokeCard 
+    {
+        padding: 0px;
+        margin-right: 50vw;
+        width: 60vw; /* Ajustado para ocupar 90% da largura da tela */
+        
+        margin: 10px auto;
+    }
+
+    .containerMain{
+        margin-left: 10px; 
+        margin-right: 5px;
+        padding-top: 20px; 
+    }
+
+    .container img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .pokemon-img img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .pokemonsResponsivos 
+    {
+        display: flex;
+        margin-top: 150vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+}
