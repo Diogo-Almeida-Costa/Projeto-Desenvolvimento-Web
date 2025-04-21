@@ -1,0 +1,71 @@
+img{
+  width: 300px;  
+}
+
+body {
+  margin: 0;
+  background-image: url("images/background.png");  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  height: 700px;  
+}  
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.quadrado-central {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+}
+
+.quadrado-senha {
+  position: relative;
+}
+
+.botao {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #45a049;
+}
+
+.botao-linha {
+  display: inline-block;
+  margin-top: 0.5px;
+  padding: 10px;
+  border: 2px solid #4caf50;
+  color: #4caf50;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.botao-linha:hover {
+  background-color: #4caf50;
+  color: white;
+}
