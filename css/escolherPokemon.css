@@ -1,13 +1,12 @@
 body
 {
-    background: linear-gradient(270deg, #FFCB05, #00721d, #FF0000, #01c0a7);
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/background.png");
     background-size: 400% 400%;
     animation: gradientAnimation 5s ease infinite;
     font-family: Arial, sans-serif;
     color: #ffffff;
-    text-align: center;
-    margin: 25px;
-
     @keyframes gradientAnimation 
     {
         0% { background-position: 0% 50%; }
@@ -22,6 +21,16 @@ h1
 {
     font-size: 80px;
     padding: 10px;
+}
+
+.conteudoPrincipal
+{
+    margin: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
 }
 
 .container
@@ -101,3 +110,120 @@ div.tipos h4
     margin-top: 10px;
     display: inline-block; /* Ensures items are displayed side by side */
 }
+
+/*Seção Menu Superior*/
+.menu-superior img 
+{
+    position: fixed;
+    width: 100%;
+    height: 135px;
+    display: block;
+}
+
+.botao-central 
+{
+    position: absolute;
+    top: 0%; /* Ajuste para posicionar na parte superior */
+    left: 50%;
+    transform: translate(-50%, -10%); /* Centraliza horizontalmente */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    padding: 0;
+}
+
+.botao-central img 
+{
+    position: fixed;
+    width: 250px;
+    height: 150px;
+    transition: transform 0.2s;
+}
+
+/*Seção Menu Lateral*/
+.menu-lateral {
+    width: 135px;
+    background: linear-gradient(to bottom, #1e90ff, #0000aa);
+    height: 100vh;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 1; 
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    margin-bottom: 130px;
+    margin-top: 130px;
+}
+
+.menu-botao {
+    background-color: #333;
+    border-color: white;
+    color: white;
+    padding: 5px;
+    border-width: 3px;
+    border-radius: 50px;
+    font-size: 15px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.menu-botao.ativo {
+    background-color: hotpink;
+}
+/*-------------------*/
+
+/*Seção Avatar*/
+.avatar-container 
+{
+    background: #459CFF;
+    border-radius: 50%;
+    padding: 15px;
+    border: 4px solid white;
+    position: absolute;
+    top: 10px;
+    left: 67px;
+    transform: translateX(-50%);
+    z-index: 4; 
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 0%;
+}
+
+
+/*Seção Ilustrativa*/
+.pokemon-img {
+    background-color: #77b255;
+    border-radius: 15px;
+    margin: 0px 0;
+    padding: 15px;
+    border: white solid;
+    border-width: 4px;
+    border-color: white;
+}
+  
+.pokemon-img img {
+    width: 80px;
+    height: 80px;
+}
+  
+.joystick-area {
+    margin-top: auto;
+    padding: 50px;
+}
+  
+.joystick-area img {
+    width: 125px;
+    height: auto;
+}
+/*-------------------*/
