@@ -35,10 +35,10 @@ body
 {
     background-color: #47a447;
     border: none;
-    padding: 13px 24px;
+    padding: 15px 30px;
     border-radius: 50px;
     color: #ffffff;
-    font-size: 19px;
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 300ms, transform 300ms; /*isso aqui é bom usar será*/
 }
@@ -51,7 +51,7 @@ body
 
 .tituloPagina
 {
-    font-size: 32px;
+    font-size: 40px;
     margin-bottom: 24px;
     position: relative;
     color: blue;
@@ -73,18 +73,18 @@ body
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24;
+    gap: 32px;
 }
 
 .timeCard
 {
     background: #333333;
     border-radius: 12px;
-    padding: 24px;
+    padding: 32px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     display: inline-flex;
     flex-direction: column;
-    margin: 16px;
+    margin: 24px;
     position: relative;
     transition: transform 300ms ease,  box-shadow 300ms ease;
 }
@@ -161,8 +161,8 @@ body
 .pokemonImagem
 {
     position: relative;
-    width: 60px;
-    height: 80px;
+    width: 80px;
+    height: 100px;
     background-color: #fff;
     border: 2px solid #f8c630;
     border-radius: 8px;
@@ -173,8 +173,8 @@ body
 
 .pokemonImagem img
 {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 100px;
     transition: transform 300ms, box-shadow 300ms;
 }
 
@@ -190,7 +190,7 @@ body
     top: 5px;
     left: 5px;
     padding: 2px 6px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     color: #ffffff;
 }
@@ -247,9 +247,9 @@ body
 {
     margin-top: 8px;
     display: flex;
-    gap: 8px;
+    gap: 12px;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .nomePokemon
@@ -447,3 +447,4 @@ body
         width: 0
     }
 }
+  
