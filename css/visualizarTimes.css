@@ -386,8 +386,10 @@ body
 }
 /*-------------------*/
 
-@media (max-width: 480px) {
-    .menu-lateral {
+@media (max-width: 480px) 
+{
+    .menu-lateral 
+    {
         width: 80px;
     }
 
@@ -402,15 +404,8 @@ body
         height: 15vh;
     }
 
-
-    .conteudoPrincipal 
+    .container 
     {
-        width: 300px;
-        margin-left: 150px;
-        padding-top: 150px; /* Adicionado para criar distância do topo */
-    }
-
-    .container {
         display: flex;
         flex-direction: column; 
         align-items: center; 
@@ -444,7 +439,63 @@ body
 
     .pokemon-img img
     {
-        width: 0
+        width: 0;
+        height: 0;
+    }
+
+    .conteudoPrincipal 
+    {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 15vh; /* Adicionado para criar distância do topo */
+    }
+
+    .timesContainer
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .timeCard
+    {
+        width: 90vw;
+        margin: 10px auto;
+        padding: 16px;
+    }
+
+    .pokemonImagem
+    {
+        width: 80px;
+        height: 100px;
+    }
+
+    .pokemonImagem img
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tituloPagina
+    {
+        font-size: 28px;
+    }
+
+    #novoTimeBtn
+    {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    .typeBadge
+    {
+        font-size: 10px;
+    }
+
+    .pokemonInfo
+    {
+        font-size: 14px;
+        gap: 8px;
     }
 }
   
