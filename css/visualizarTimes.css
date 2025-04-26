@@ -1,0 +1,501 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/background.png);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+.conteudoPrincipal
+{
+    margin-top: 135px;
+    margin-left: 135px;
+    padding: 32px;
+}
+
+.novoTimeContainer
+{
+    margin-bottom: 32px;
+}
+
+#novoTimeBtn
+{
+    background-color: #47a447;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 300ms, transform 300ms; /*isso aqui é bom usar será*/
+}
+
+#novoTimeBtn:hover
+{
+    background-color: #3b903b;
+    transform: scale(1.05);
+}
+
+.tituloPagina
+{
+    font-size: 40px;
+    margin-bottom: 24px;
+    position: relative;
+    color: blue;
+}
+
+.tituloPagina::after
+{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #f8c630, #ffcc00);
+    margin: 8px auto 0;
+    border-radius: 2px;    
+}
+
+.timesContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.timeCard
+{
+    background: #333333;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    display: inline-flex;
+    flex-direction: column;
+    margin: 24px;
+    position: relative;
+    transition: transform 300ms ease,  box-shadow 300ms ease;
+}
+
+.timeCard::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #f8c630, #ffcc00);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.timeCard:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.cardHeader
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.cardHeader h3
+{
+    margin: 0;
+    font-size: 24px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.deleteBtn
+{
+    background: #ff5555;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transition: background-color 300ms, transform 300ms;
+}
+
+.deleteBtn:hover
+{
+    background: #ff0000;
+    transform: scale(1.1);
+}
+
+.pokemonIcons
+{
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+}
+
+.pokemonItem
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemonImagem
+{
+    position: relative;
+    width: 80px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #f8c630;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemonImagem img
+{
+    width: 80px;
+    height: 100px;
+    transition: transform 300ms, box-shadow 300ms;
+}
+
+.pokemonImagem img:hover
+{
+    transform: scale(1.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.typeBadge
+{
+    position:absolute;
+    top: 5px;
+    left: 5px;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.typeBadge.segundo
+{
+    left: auto;
+    right: 5px;
+}
+
+.planta
+{
+    background-color: #78C850;
+}
+
+.veneno
+{
+    background-color: #A040A0;
+}
+
+.fogo
+{
+    background-color: #F08030;
+}
+
+.agua
+{
+    background-color: #6890F0;
+}
+
+.eletrico
+{
+    background-color: #F8D030;
+    color: #333333;
+}
+
+.fada     
+{ 
+    background-color: #EE99AC; 
+}
+
+.normal   
+{ 
+    background-color: #A8A878; 
+    color: #333333; 
+}
+
+.fantasma 
+{ 
+    background-color: #705898; 
+}
+
+.pokemonInfo
+{
+    margin-top: 8px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 16px;
+}
+
+.nomePokemon
+{
+    font-weight: bold;
+}
+
+.pokemonNumero
+{
+    color: #f8c630;
+}
+
+/*Seção Menu Superior*/
+.menu-superior#menu{
+    width: 100%;
+    height: 135px;
+    display: block;
+}
+
+.menu-superior {
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 135px;
+    z-index: 2;
+}
+
+.botao-central 
+{
+    position: absolute;
+    top: 0%;
+    left: 58%;
+    margin-top: 40px;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    padding: 0;
+}
+
+.botao-central img {
+    width: 300px;
+    height: auto;
+}
+
+
+/*Seção Menu Lateral*/
+.menu-lateral {
+    width: 135px;
+    background: linear-gradient(to bottom, #1e90ff, #0000aa);
+    height: 100vh;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 1; 
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    margin-bottom: 130px;
+    margin-top: 130px;
+}
+
+.menu-botao {
+    background-color: #333;
+    border-color: white;
+    color: white;
+    padding: 5px;
+    border-width: 3px;
+    border-radius: 40px;
+    font-size: 15px;
+    width: 120px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu-botao.ativo {
+    background-color: hotpink;
+}
+/*-------------------*/
+
+/*Seção Avatar*/
+.avatar-container {
+    background: #459CFF;
+    border-radius: 50%;
+    padding: 0px;
+    border: 4px solid white;
+    position: absolute;
+    top: 10px;
+    left: 67px;
+    transform: translateX(-50%);
+    z-index: 4; 
+}
+
+.avatar 
+{
+    width: 80px; /* Ajustado para um tamanho proporcional */
+    height: 80px; /* Ajustado para um tamanho proporcional */
+    border-radius: 50%; /* Tornar o avatar circular */
+}
+
+/*Seção Ilustrativa*/
+.pokemon-img {
+    background-color: #77b255;
+    border-radius: 15px;
+    margin: 0px 0;
+    padding: 15px;
+    border: white solid;
+    border-width: 4px;
+    border-color: white;
+}
+  
+.pokemon-img img {
+    width: 80px;
+    height: 80px;
+}
+  
+.joystick-area {
+    margin-top: auto;
+    padding: 50px;
+}
+  
+.joystick-area img {
+    width: 125px;
+    height: auto;
+}
+/*-------------------*/
+
+@media (max-width: 480px) 
+{
+    .menu-lateral 
+    {
+        width: 80px;
+    }
+
+    .menu-botao 
+    {
+        font-size: 10px;
+        width: 80px;
+    }
+
+    .menu-superior
+    {
+        height: 15vh;
+    }
+
+    .container 
+    {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .avatar
+    {
+        display: none;
+    }
+
+    .avatar-container
+    {
+        display: none;
+    }
+
+    .pokemon-img
+    {
+        padding: 5px;
+    }
+
+    .joystick-area img
+    {
+        width: 80px;
+    }
+
+    .botao-central
+    {
+        position: absolute;   
+        left: 50vw;
+     }
+
+    .pokemon-img img
+    {
+        width: 0;
+        height: 0;
+    }
+
+    .conteudoPrincipal 
+    {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 15vh; /* Adicionado para criar distância do topo */
+    }
+
+    .timesContainer
+    {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .timeCard
+    {
+        width: 90vw;
+        margin: 10px auto;
+        padding: 16px;
+    }
+
+    .pokemonImagem
+    {
+        width: 80px;
+        height: 100px;
+    }
+
+    .pokemonImagem img
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tituloPagina
+    {
+        font-size: 28px;
+    }
+
+    #novoTimeBtn
+    {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    .typeBadge
+    {
+        font-size: 10px;
+    }
+
+    .pokemonInfo
+    {
+        font-size: 14px;
+        gap: 8px;
+    }
+}
+  
