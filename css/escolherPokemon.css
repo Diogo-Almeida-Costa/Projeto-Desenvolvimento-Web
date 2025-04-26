@@ -115,6 +115,8 @@ div.tipos h4 {
     color: white;
     font-size: 14px;
 }
+
+
 /*Seção Menu Superior*/
 .menu-superior#menu{
     width: 100%;
@@ -224,7 +226,8 @@ div.tipos h4 {
     border-color: white;
 }
   
-.pokemon-img img {
+.pokemon-img img 
+{
     width: 80px;
     height: 80px;
 }
@@ -303,13 +306,11 @@ div.tipos h4 {
         width: 0
     }
     
-
     .pokeCard 
     {
         padding: 0px;
         margin-right: 50vw;
-        width: 60vw; /* Ajustado para ocupar 90% da largura da tela */
-        
+        width: 60vw;         
         margin: 10px auto;
     }
 
@@ -332,11 +333,12 @@ div.tipos h4 {
     .pokemonsResponsivos 
     {
         display: flex;
-        margin-top: 150vh;
+        margin-top: 130vh;
+        margin-left: 80px;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 10px; /* Espaçamento entre os itens */
+        gap: 10px;
     }
 }
