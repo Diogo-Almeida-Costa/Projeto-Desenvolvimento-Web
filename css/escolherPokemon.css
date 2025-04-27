@@ -44,9 +44,9 @@ h1 {
 .container 
 {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    flex-wrap: wrap; 
     justify-content: center;
-    gap: 20px; /* Espaçamento entre os cards */
+    gap: 20px; 
 }
 
 .container img {
@@ -79,7 +79,6 @@ h1 {
     transition: border-color 0.5s ease-in-out;
 }
 
-/* Estilos para hover em diferentes tipos de Pokémon */
 .pokeCard:hover#pokemonPlanta {
     background: linear-gradient(360deg, #441258, #0dbd56, #035c30);
     transition: background 0.1s ease-in;
