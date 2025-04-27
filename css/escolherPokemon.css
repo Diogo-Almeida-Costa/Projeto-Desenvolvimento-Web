@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
 body 
 {
     display: flex;
@@ -9,6 +11,19 @@ body
     animation: gradientAnimation 5s ease infinite;
     font-family: Arial, sans-serif;
     color: #ffffff;
+}
+
+.jersey-15-regular 
+{
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a 
+{
+    text-decoration: none;
+    color: white;
 }
 
 .containerMain
@@ -156,6 +171,8 @@ div.tipos h4 {
 
 /*Seção Menu Lateral*/
 .menu-lateral {
+    
+    text-align: center;
     width: 135px;
     background: linear-gradient(to bottom, #1e90ff, #0000aa);
     height: 100vh;
@@ -189,8 +206,10 @@ div.tipos h4 {
     text-decoration: none;
 }
 
-.menu-botao.ativo {
+.menu-botao:hover 
+{
     background-color: hotpink;
+    transform: scale(1.1);
 }
 /*-------------------*/
 
