@@ -40,7 +40,7 @@ body
     color: #ffffff;
     font-size: 20px;
     cursor: pointer;
-    transition: background-color 300ms, transform 300ms; /*isso aqui é bom usar será*/
+    transition: background-color 300ms, transform 300ms; 
 }
 
 #novoTimeBtn:hover
@@ -449,7 +449,7 @@ body
     {
         width: 100%;
         margin-left: 0;
-        padding-top: 15vh; /* Adicionado para criar distância do topo */
+        padding-top: 15vh;
     }
 
     .timesContainer
