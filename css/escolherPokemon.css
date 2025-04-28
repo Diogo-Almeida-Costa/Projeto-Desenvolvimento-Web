@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
 body 
 {
     display: flex;
@@ -9,6 +11,19 @@ body
     animation: gradientAnimation 5s ease infinite;
     font-family: Arial, sans-serif;
     color: #ffffff;
+}
+
+.jersey-15-regular 
+{
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a 
+{
+    text-decoration: none;
+    color: white;
 }
 
 .containerMain
@@ -29,9 +44,9 @@ h1 {
 .container 
 {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    flex-wrap: wrap; 
     justify-content: center;
-    gap: 20px; /* Espaçamento entre os cards */
+    gap: 20px; 
 }
 
 .container img {
@@ -64,7 +79,6 @@ h1 {
     transition: border-color 0.5s ease-in-out;
 }
 
-/* Estilos para hover em diferentes tipos de Pokémon */
 .pokeCard:hover#pokemonPlanta {
     background: linear-gradient(360deg, #441258, #0dbd56, #035c30);
     transition: background 0.1s ease-in;
@@ -115,6 +129,8 @@ div.tipos h4 {
     color: white;
     font-size: 14px;
 }
+
+
 /*Seção Menu Superior*/
 .menu-superior#menu{
     width: 100%;
@@ -154,6 +170,8 @@ div.tipos h4 {
 
 /*Seção Menu Lateral*/
 .menu-lateral {
+    
+    text-align: center;
     width: 135px;
     background: linear-gradient(to bottom, #1e90ff, #0000aa);
     height: 100vh;
@@ -187,8 +205,10 @@ div.tipos h4 {
     text-decoration: none;
 }
 
-.menu-botao.ativo {
+.menu-botao:hover 
+{
     background-color: hotpink;
+    transform: scale(1.1);
 }
 /*-------------------*/
 
@@ -224,7 +244,8 @@ div.tipos h4 {
     border-color: white;
 }
   
-.pokemon-img img {
+.pokemon-img img 
+{
     width: 80px;
     height: 80px;
 }
@@ -303,13 +324,11 @@ div.tipos h4 {
         width: 0
     }
     
-
     .pokeCard 
     {
         padding: 0px;
         margin-right: 50vw;
-        width: 60vw; /* Ajustado para ocupar 90% da largura da tela */
-        
+        width: 60vw;         
         margin: 10px auto;
     }
 
@@ -332,11 +351,12 @@ div.tipos h4 {
     .pokemonsResponsivos 
     {
         display: flex;
-        margin-top: 150vh;
+        margin-top: 130vh;
+        margin-left: 80px;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 10px; /* Espaçamento entre os itens */
+        gap: 10px;
     }
 }

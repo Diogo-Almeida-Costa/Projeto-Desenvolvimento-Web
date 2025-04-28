@@ -334,8 +334,10 @@ body
     text-decoration: none;
 }
 
-.menu-botao.ativo {
+.menu-botao:hover 
+{
     background-color: hotpink;
+    transform: scale(1.1);
 }
 /*-------------------*/
 
