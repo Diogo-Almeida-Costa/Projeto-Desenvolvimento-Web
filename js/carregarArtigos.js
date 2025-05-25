@@ -3,11 +3,16 @@ document.addEventListener("DOMContentLoaded", () =>
     const lista = document.getElementById("listaArtigos");
     const artigos = JSON.parse(localStorage.getItem("artigos")) || [];
 
-    artigos.forEach((artigo) => 
+    artigos.forEach((artigo, index) => 
     {
         const card = document.createElement("a");
         card.classList.add("artigoCard");
-        card.href = "#";
+        card.href = "../gerenciaArtigos/detalhesArtigo.html";
+
+        card.addEventListener("click", () =>
+        {
+            localStorage.setItem("artigoSelecionado", index)
+        });
 
         card.innerHTML = `
             <img src="${artigo.imagem}" class="thumb"/>
