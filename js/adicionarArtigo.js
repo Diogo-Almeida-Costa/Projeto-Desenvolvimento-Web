@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () =>
             const reader = new FileReader();
             reader.onload = () => salvarArtigo(reader.result);
             reader.readAsDataURL(fileInput.files[0]);
+            return;
         }
         else
         {
