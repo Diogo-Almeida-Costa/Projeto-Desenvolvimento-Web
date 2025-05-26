@@ -1,167 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/visualizarTimes.css">
-    <title>Pokeindex - Meus Times</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/visualizarTimes.css"> 
+    <title>PokeIndex - Meus Times</title>
     <link rel="icon" type="image/png" href="img/Logo - Pokedex.png">
 </head>
 <body>
-
-
-     <!--MENU SUPERIOR-->
-     <div class="menu-superior" id="menu">
-        <img src="img/menu-superior.png" class="menu-superior img" />
-
-        <!--BOTÃO COM NOME DO SITE-->
+    <header class="menu-superior">
+        <div class="forma-azul"></div>
+        <div class="forma-rosa"></div>
         <a href="page1.html" class="botao-central">
-            <img src="img/PokeIndex.gif"/>
+            <img src="img/PokeIndex.gif" alt="PokeIndex Logo Animation"/>
         </a>
-
         <div class="avatar-container">
-            <img src="img/Logo - Pokedex.png" class="avatar" />
+            <img src="img/Logo - Pokedex.png" class="avatar" alt="Pokedex Logo"/>
         </div>
-    </div>
+    </header>
 
-     <!--LOGO CANTO SUPERIOR ESQUERDO-->
-
-
-    <!--MENU LATERAL-->
     <aside class="menu-lateral">
         <nav class="menu">
-            <a href="login.html" class="menu-botao"><button class="menu-botao">Login</button></a>
-            <a href="visualizarTimes.html"><button class="menu-botao">MEUS TIMES</button></a>
-            <a href="artigos.html"><button class="menu-botao">SOBRE</button></a>
-            <a href="escolherPokemon.html"><button class="menu-botao">POKEDEX</button></a>
+            <a href="login.html" class="btn btn-custom-menu-lateral mb-2">Login</a>
+            <a href="visualizarTimes.html" class="btn btn-custom-menu-lateral mb-2 active">MEUS TIMES</a>
+            <a href="artigos.html" class="btn btn-custom-menu-lateral mb-2">SOBRE</a>
+            <a href="escolherPokemon.html" class="btn btn-custom-menu-lateral mb-2">POKEDEX</a> 
         </nav>
-
-        <!--GREEN SCREEN COM BULBASAUR-->
-        <div class="pokemon-img">
-            <img src="img/bulbasaur - durp.png"/>
+        <div class="pokemon-img mt-auto">
+            <img src="img/bulbasaur - durp.png" alt="Bulbasaur illustration"/>
         </div>
-
-        <!--JOYSTICK-->
         <div class="joystick-area">
-            <img src="img/joystick.png"/>
+            <img src="img/joystick.png" alt="Joystick icon"/>
         </div>
     </aside>
 
     <main class="conteudoPrincipal">
         <article>
             <div class="novoTimeContainer">
-                <button id="novoTimeBtn"> + Novo Time </button>
+                <button id="novoTimeBtn" class="btn btn-primary btn-lg"> + Novo Time </button>
             </div>
-
-            <h1 class="tituloPagina"> Seus Times </h1>
-
-            <div class="timesContainer">
-
-                <div class="timeCard">
-                    <div class="cardHeader">
-                        <h3> TIme A </h3>
-                        <button class="deleteBtn" title="Excluir Time"> &#10006 </button>         
-                    </div>
-
-                    <div class="pokemonIcons">
-
-                        <div class="pokemonItem">
-
-                            <div class="pokemonImagem">
-                                <div class="typeBadge planta">🍃</div>
-                                <div class="typeBadge segundo veneno">☠️</div>
-                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Pokemon 1">
-                            </div>
-
-                            <div class="pokemonInfo">
-                                <span class="nomePokemon"> Bulbasaur </span>
-                                <span class="pokemonNumero"> #01 </span>
-                            </div>
-                            
-                        </div>
-
-                        <div class="pokemonItem">
-                        
-                            <div class="pokemonImagem">
-                                <div class="typeBadge fogo">🔥</div>
-                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Pokemon 2">
-                            </div>
-
-                            <div class="pokemonInfo">
-                                <span class="nomePokemon"> Charmander </span>
-                                <span class="pokemonNumero"> #02 </span>
-                            </div>
-
-                        </div>
-
-                        <div class="pokemonItem">
-
-                            <div class="pokemonImagem">
-                            <div class="typeBadge agua"> 💧 </div>
-                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Pokemon 3">
-                            </div>
-
-                            <div class="pokemonInfo">
-                                <span class="nomePokemon"> Squirtle </span>
-                                <span class="pokemonNumero"> #03 </span>
-                            </div>
-
-                        </div>
-                    </div>
+            <h1 class="tituloPagina">Seus Times</h1>
+            <div class="timesContainer" id="timesContainer">
                 </div>
-
-                <div class="timeCard">
-                    <div class="cardHeader">
-                    <h3>Time B</h3>
-                    <button class="deleteBtn" title="Excluir Time">&#10006;</button>
-                    </div>
-                    <div class="pokemonIcons">
-
-                        <div class="pokemonItem">
-                            <div class="pokemonImagem"> 
-                                <div class="typeBadge eletrico"> ⚡ </div>
-                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
-                            </div>
-
-                            <div class="pokemonInfo">
-                                <span class="nomePokemon"> Pikachu </span>
-                                <span class="pokemonNumero"> #01 </span>
-                            </div>
-
-                        </div>
-
-                        <div class="pokemonItem">
-                            <div class="pokemonImagem">
-                                <div class="typeBadge fada">🧚</div>
-                                <div class="typeBadge segundo normal">⚪</div>
-                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png" alt="Jigglypuff">
-                            </div>
-
-                            <div class="pokemonInfo">
-                                <span class="nomePokemon"> Jigglypuff </span>
-                                <span class="pokemonNumero"> #02 </span>
-                            </div>
-
-                        </div>
-
-                        <div class="pokemonItem"> 
-
-                            <div class="pokemonImagem">
-                                <div class="typeBadge veneno">☠️</div>
-                                <div class="typeBadge segundo fantasma">👻</div>
-                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png" alt="Gengar">
-                            </div>
-
-                            <div class="pokemonInfo">
-                                <span class="nomePokemon"> Gengar </span>
-                                <span class="pokemonNumero"> #03 </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </article>
     </main>
+
+    <script src="js/visualizarTimes.js"></script> 
 </body>
 </html>
