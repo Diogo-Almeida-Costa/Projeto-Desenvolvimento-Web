@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () =>
 {
     const container = document.getElementById("detalhesArtigo");
 
+    const tituloPagina = document.getElementById("tituloPagina");
+
     const artigos = JSON.parse(localStorage.getItem("artigos")) || [];
     const indice = localStorage.getItem("artigoSelecionado");
 
@@ -18,4 +20,7 @@ document.addEventListener("DOMContentLoaded", () =>
         <h2 class="text-center mb-3"> ${artigo.titulo} </h2>
         <p class="fs-5"> ${artigo.conteudo} </p>
     `;
+
+    tituloPagina.value = `${artigo.titulo}`;
+
 });

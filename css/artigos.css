@@ -1,3 +1,23 @@
+:root 
+{
+    --azul-primario: #1e28be;
+    --rosa-primario: #f0557c;
+    --fundo-card-custom: #282828; 
+    --cor-texto: #ffffff;
+    --fonte-jersey: "Jersey 15", sans-serif;
+    --fonte-arial: Arial, sans-serif;
+    --altura-menu-superior: 20vh;
+
+    /* Cores customizadas para badges */
+    --tipo-planta-fundo: rgb(34, 139, 34);
+    --tipo-veneno-fundo: rgb(128, 0, 128);
+    --tipo-fogo-fundo: rgb(255, 69, 0);
+    --tipo-voador-fundo: rgb(135, 206, 250);
+    --tipo-agua-fundo: rgb(0, 191, 255);
+    --tipo-eletrico-fundo: rgb(255, 215, 0); 
+    --borda-padrao-tipo: #ffffff;
+}
+
 *
 {
     box-sizing: border-box;
@@ -17,11 +37,12 @@ body
     font-family: Arial, sans-serif;
     color: #ffffff;
     text-align: center;
+    padding-top: 135px;
 }
 
 .conteudoPrincipal
 {
-    margin-top: 45px; 
+    margin-top: 0; 
     margin-left: 135px; 
     padding: 32px;
 }
@@ -115,131 +136,170 @@ body
     text-align: left;
 }
 
-/*Seção Menu Superior*/
-.menu-superior#menu{
-    width: 100%;
-    height: 135px;
-    display: block;
-}
+.tipo-planta { background-color: var(--tipo-planta-fundo) !important; }
+.tipo-veneno { background-color: var(--tipo-veneno-fundo) !important; }
+.tipo-fogo { background-color: var(--tipo-fogo-fundo) !important; }
+.tipo-voador { background-color: var(--tipo-voador-fundo) !important; }
+.tipo-agua { background-color: var(--tipo-agua-fundo) !important; }
+.tipo-eletrico { background-color: var(--tipo-eletrico-fundo) !important; }
 
-.menu-superior {
-    margin: auto;
+.menu-superior 
+{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 135px;
-    z-index: 2;
+    height: var(--altura-menu-superior);
+    z-index: 1000;
+}
+
+.forma-azul, .forma-rosa 
+{ 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.forma-azul 
+{
+    background-color: var(--azul-primario);
+    z-index: 2; 
+    clip-path: polygon(
+        0% 0%, 100% 0%, 
+        100% 60%, 95% 60%, 80% 20%, 65% 20%, 55% 50%, 45% 50%, 35% 20%, 20% 20%, 5% 60%, 0% 60%
+    );
+}
+
+.forma-rosa 
+{
+    background-color: var(--rosa-primario);
+    z-index: 1; 
+    clip-path: polygon(
+        0% 60%, 5% 60%, 20% 20%, 35% 20%, 45% 50%, 55% 50%, 65% 20%, 80% 20%, 95% 60%, 100% 60%,
+        100% 75%, 95% 75%, 80% 35%, 65% 35%, 55% 65%, 45% 65%, 35% 35%, 20% 35%, 5% 75%, 0% 75%
+    );
 }
 
 .botao-central 
 {
     position: absolute;
-    top: 0%;
-    left: 58%;
-    margin-top: 40px;
-    transform: translate(-50%, -50%);
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 3;
+    z-index: 10; 
     padding: 0;
 }
 
-.botao-central img {
-    width: 300px;
-    height: auto;
-}
-
-
-/*Seção Menu Lateral*/
-.menu-lateral {
-    width: 135px;
-    background: linear-gradient(to bottom, #1e90ff, #0000aa);
-    height: 100vh;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    z-index: 1; 
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 20px 0;
-    margin-bottom: 130px;
-    margin-top: 130px;
-}
-
-.menu-botao {
-    background-color: #333;
-    border-color: white;
-    color: white;
-    padding: 5px;
-    border-width: 3px;
-    border-radius: 40px;
-    font-size: 15px;
-    width: 120px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.menu-botao:hover 
+.botao-central img 
 {
-    background-color: hotpink;
-    transform: scale(1.1);
+    width: 250px;
+    height: auto;
+    display: block;
 }
-/*-------------------*/
 
-/*Seção Avatar*/
-.avatar-container {
+
+.avatar-container 
+{
     background: #459CFF;
     border-radius: 50%;
-    padding: 0px;
-    border: 4px solid white;
+    padding: 3px;
+    border: 3px solid white;
     position: absolute;
-    top: 10px;
-    left: 67px;
-    transform: translateX(-50%);
+    top: 8px;
+    left: 40px;
     z-index: 4; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .avatar 
 {
-    width: 80px; /* Ajustado para um tamanho proporcional */
-    height: 80px; /* Ajustado para um tamanho proporcional */
-    border-radius: 50%; /* Tornar o avatar circular */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
 }
 
-/*Seção Ilustrativa*/
-.pokemon-img {
+.menu-lateral 
+{
+    text-align: center;
+    width: 135px;
+    background: linear-gradient(to bottom, #1e90ff, #0000aa);
+    height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900; 
+    box-sizing: border-box;
+    padding-top: calc(var(--altura-menu-superior) + 20px); 
+}
+
+.menu 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.btn-custom-menu-lateral 
+{
+    background-color: var(--fundo-card-custom) !important;
+    border: 2px solid white !important;
+    color: white !important;
+    border-radius: 20px !important;
+    font-size: 14px !important;
+    width: 110px !important;
+    padding: 8px 10px !important;
+    transition: background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.btn-custom-menu-lateral:hover,
+.btn-custom-menu-lateral.active 
+{
+    background-color: hotpink !important;
+    transform: scale(1.05) !important;
+    border-color: white !important;
+}
+
+.pokemon-img 
+{ 
     background-color: #77b255;
     border-radius: 15px;
-    margin: 0px 0;
-    padding: 15px;
-    border: white solid;
-    border-width: 4px;
-    border-color: white;
+    margin-top: 20px;
+    padding: 10px;
+    border: 3px solid white;
 }
-  
-.pokemon-img img {
-    width: 80px;
-    height: 80px;
+
+.pokemon-img img 
+{
+    width: 70px;
+    height: 70px;
+    display: block;
 }
-  
-.joystick-area {
-    margin-top: auto;
-    padding: 50px;
+
+.joystick-area 
+{
+    margin-top: auto; 
+    padding-bottom: 20px;
 }
-  
-.joystick-area img {
-    width: 125px;
+
+.joystick-area img 
+{
+    width: 100px;
     height: auto;
+    display: block;
 }
-/*-------------------*/
+
 
 @media (max-width: 480px) {
     .menu-lateral 

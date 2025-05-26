@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () =>
 {
     const form = document.getElementById("artigoForm");
 
+    const fileInput = document.getElementById("imagemArtigo");
+
     form.addEventListener("submit", (e) => 
     {
         e.preventDefault();
@@ -9,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () =>
         const titulo = document.getElementById("tituloArtigo").value.trim();
         const resumo = document.getElementById("resumoArtigo").value.trim();
         const conteudo = document.getElementById("conteudoArtigo").value.trim();
-        const fileInput = document.getElementById("imagemArtigo");
 
         if(!titulo || !resumo || !conteudo)
         {
@@ -31,7 +32,8 @@ document.addEventListener("DOMContentLoaded", () =>
             window.location.href = "artigos.html";
         };
 
-        if(fileInput.file && fileInput.files[0])
+
+        if(fileInput.files && fileInput.files[0])
         {
             const reader = new FileReader();
             reader.onload = () => salvarArtigo(reader.result);
