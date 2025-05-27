@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+.jersey-15-regular {
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body 
+{
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url('../img/background.png');
+    margin: 0px;
+}
+
+a 
+{
+    text-decoration: none;
+}
+
+.pokemonsGrama 
+{
+    border-radius: 20px;
+    background-color: rgb(109, 218, 88, 0.3);
+    padding-top: 10vh;
+    padding-left: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pokemonSelecionado 
+{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    background-image: url('../img/fundoPlantaPokemon.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.imagemPokemon 
+{
+    width: 10vw;
+    height: 20vh;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.imagemPokemonIvysauro
+{
+    width: 15vw;
+    height: 30vh;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.imagemPokemonVenusaur
+{
+    width: 20vw;
+    height: 35vh;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.quadradoFundo 
+{
+    width: 50vw;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+img .quadradoFundo
+{
+    border-radius: 10px;
+}
+
+.descricaoPokemonGrama
+{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    font-size: 24px;
+    padding: 15px;
+    background: linear-gradient(360deg, #441258, #0dbd56, #035c30);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+.descricaoPokemonGrama h1
+{
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    font-family: 'Jersey 15', sans-serif; 
+    font-size: 410%;
+    font-weight: 400; /* Opcional: defina o peso da fonte */
+}
+
+.descricaoPokemonGrama h1:hover 
+{
+    color: rgb(0, 70, 4);
+    transform: translateY(-5px);
+    transition: transform 0.4s ease; 
+}
+
+.descricaoPokemonGrama h2 
+{
+    color: rgb(250, 250, 250);
+    margin: 0px;
+    text-align: center;
+    font-family: 'Jersey 15', sans-serif; 
+    font-size: 210%;
+    font-weight: 400; 
+}
+.descricaoPokemonGrama h2:hover 
+{
+    color: rgb(0, 70, 4);
+    transform: translateY(-5px);
+    transition: transform 0.4s ease; 
+}
+
+.descricaoPokemonGrama ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-link {
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    background-color: #065e0c;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-link:hover 
+{
+    background-color: #0a8f1d;
+}
+
+
+/*Seção Menu Superior*/
+.menu-superior#menu{
+    width: 100%;
+    height: 135px;
+    display: block;
+}
+
+.menu-superior {
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 135px;
+    z-index: 2;
+}
+
+.botao-central 
+{
+    position: absolute;
+    top: 0%;
+    left: 58%;
+    margin-top: 40px;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    padding: 0;
+}
+
+.botao-central img {
+    width: 300px;
+    height: auto;
+}
+
+
+/*Seção Menu Lateral*/
+.menu-lateral 
+{
+    text-align: center;
+    width: 135px;
+    background: linear-gradient(to bottom, #1e90ff, #0000aa);
+    height: 100vh;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 1; 
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    margin-bottom: 130px;
+    margin-top: 130px;
+}
+
+.menu-botao 
+{
+    background-color: #333;
+    border-color: white;
+    color: white;
+    padding: 5px;
+    border-width: 3px;
+    border-radius: 40px;
+    font-size: 15px;
+    width: 120px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu-botao.ativo {
+    background-color: hotpink;
+}
+/*-------------------*/
+
+/*Seção Avatar*/
+.avatar-container {
+    background: #459CFF;
+    border-radius: 50%;
+    padding: 0px;
+    border: 4px solid white;
+    position: absolute;
+    top: 10px;
+    left: 67px;
+    transform: translateX(-50%);
+    z-index: 4; 
+}
+
+.avatar 
+{
+    width: 80px; /* Ajustado para um tamanho proporcional */
+    height: 80px; /* Ajustado para um tamanho proporcional */
+    border-radius: 50%; /* Tornar o avatar circular */
+}
+/*-------------------*/
+
+/*Seção Ilustrativa*/
+.pokemon-img {
+    background-color: #77b255;
+    border-radius: 15px;
+    margin: 0px 0;
+    padding: 15px;
+    border: white solid;
+    border-width: 4px;
+    border-color: white;
+}
+  
+.pokemon-img img 
+{
+    width: 80px;
+    height: 80px;
+}
+  
+.joystick-area {
+    margin-top: auto;
+    padding: 50px;
+}
+  
+.joystick-area img {
+    width: 125px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) 
+{
+    .pokemonSelecionado 
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagemPokemon {
+        width: 100px;
+        height: 150px;
+    }
+
+    .descricaoPokemonGrama {
+        width: 80vw;
+        height: auto;
+    }
+
+    .descricaoPokemonGrama h1 {
+        font-size: 200%;
+    }
+
+    .descricaoPokemonGrama h2 {
+        font-size: 150%;
+    }
+    
+}
+
+@media (max-width: 480px) 
+{
+
+    .menu-lateral 
+    {
+        width: 80px;
+    }
+
+    .menu-botao 
+    {
+        font-size: 10px;
+        width: 80px;
+    }
+
+    .menu-superior
+    {
+        height: 15vh;
+    }
+
+    .avatar
+    {
+        display: none;
+    }
+
+    .avatar-container
+    {
+        display: none;
+    }
+
+    .pokemon-img
+    {
+        padding: 5px;
+    }
+
+    .joystick-area img
+    {
+        width: 80px;
+    }
+
+    .botao-central
+    {
+        position: absolute;   
+        left: 50vw;
+     }
+
+    .pokemon-img img 
+    {
+        width: 50px;
+        height: 50px;
+    }
+
+    .quadradoFundo
+    {
+        width: 55vw;
+        height: 30vh;
+    }
+
+    .descricaoPokemonGrama 
+    {
+        width: 50vw;
+        height: auto;
+    }
+
+    .imagemPokemonIvysauro
+    {
+        width: 20vw;
+        height: 30vh;
+    }
+}

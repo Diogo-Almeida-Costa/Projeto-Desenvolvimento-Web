@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/escolherPokemon.css">
+    <title>PokeIndex - Pokedex</title>
+    <link rel="icon" type="image/png" href="img/Logo - Pokedex.png">
+</head>
+<body>
+    <header class="menu-superior">
+        <div class="forma-azul"></div>
+        <div class="forma-rosa"></div>
+        <a href="page1.html" class="botao-central">
+            <img src="img/PokeIndex.gif" alt="PokeIndex Logo Animation"/>
+        </a>
+        <div class="avatar-container">
+            <img src="img/Logo - Pokedex.png" class="avatar" alt="Pokedex Logo"/>
+            <span id="nome-usuario" class="nome-usuario"></span>
+        </div>
+        <button type="button" id="botaoConfirmarSelecao" class="menu-botao-confirmar" style="display: none;">Confirmar Time</button>
+    </header>
+
+    <aside class="menu-lateral">
+        <nav class="menu">
+            <a href="login.html" class="btn btn-custom-menu-lateral mb-2">Login</a>
+            <a href="visualizarTimes.html" class="btn btn-custom-menu-lateral mb-2">MEUS TIMES</a>
+            <a href="/gerenciaArtigos/artigos.html" class="btn btn-custom-menu-lateral mb-2">SOBRE</a>
+            <a href="escolherPokemon.html" class="btn btn-custom-menu-lateral mb-2 active">POKEDEX</a> 
+        </nav>
+        <div class="pokemon-img mt-auto">
+            <img src="img/bulbasaur - durp.png" alt="Bulbasaur illustration"/>
+        </div>
+        <div class="joystick-area">
+            <img src="img/joystick.png" alt="Joystick icon"/>
+        </div>
+    </aside>
+
+    <main class="containerMain container-fluid pt-3">
+        <h1 class="text-center mb-4">Escolha seus Pokémons</h1>
+        
+        <div class="pokemonsResponsivos">
+            <div class="container">
+                <div class="row g-3" id="pokemonCardContainer">
+                    
+                     
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <button type="button" id="botaoSalvarTimeInferior" class="btn botao-salvar-inferior" style="display: none;">Salvar Novo Time</button>
+
+    <!-- autenticação -->
+    <script src="js/autenticacao.js"></script>
+    <script src="js/protecaoRota.js"></script>
+    
+    <script type="module" src="js/escolherPokemons.js"></script>
+</body>
+</html>

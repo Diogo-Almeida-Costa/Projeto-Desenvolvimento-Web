@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pokeindex - Login</title>
+    <link rel="stylesheet" href="css/login.css"/>
+    <link rel="icon" type="image/png" href="img/Logo - Pokedex.png">
+    <style>
+        .mensagem {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: none;
+        }
+        .erro {
+            background-color: #ffdddd;
+            color: #f44336;
+            border: 1px solid #f44336;
+        }
+        .sucesso {
+            background-color: #ddffdd;
+            color: #4CAF50;
+            border: 1px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="login.html"><img src="img/PokeIndex.gif" alt="Logo"></a>
+        <div id="mensagem" class="mensagem"></div>
+        <form class="quadrado-central">
+            <input type="text" id="username" placeholder="Nome de usuário" required />
+            <div class="quadrado-senha">
+                <input type="password" id="senha" placeholder="Senha" required />
+            </div>
+            <button type="submit" class="botao">Entrar</button>
+        </form>
+        <p>Você não tem uma conta?</p>
+        <a href="cadastro.html" class="botao-linha">Criar conta</a>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

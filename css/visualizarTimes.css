@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+:root {
+    --azul-primario: #1e28be;
+    --rosa-primario: #f0557c;
+    --fundo-card-custom: #282828; 
+    --cor-texto: #ffffff;
+    --fonte-jersey: "Jersey 15", sans-serif;
+    --fonte-arial: Arial, sans-serif;
+    --altura-menu-superior: 20vh;
+
+    --tipo-planta-fundo: rgb(34, 139, 34);
+    --tipo-veneno-fundo: rgb(128, 0, 128);
+    --tipo-fogo-fundo: rgb(255, 69, 0);
+    --tipo-voador-fundo: rgb(135, 206, 250);
+    --tipo-agua-fundo: rgb(0, 191, 255);
+    --tipo-eletrico-fundo: rgb(255, 215, 0); 
+    --borda-padrao-tipo: #ffffff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/background.png");
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+    font-family: var(--fonte-arial);
+    color: var(--cor-texto);
+    padding-top: var(--altura-menu-superior); 
+    padding-left: 135px; 
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+@keyframes gradientAnimation
+{ 
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.jersey-15-regular 
+{ 
+    font-family: var(--fonte-jersey);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tipo-planta { background-color: var(--tipo-planta-fundo) !important; color: white; }
+.tipo-veneno { background-color: var(--tipo-veneno-fundo) !important; color: white; }
+.tipo-fogo { background-color: var(--tipo-fogo-fundo) !important; color: white; }
+.tipo-voador { background-color: var(--tipo-voador-fundo) !important; color: white; }
+.tipo-agua { background-color: var(--tipo-agua-fundo) !important; color: white; }
+.tipo-eletrico { background-color: var(--tipo-eletrico-fundo) !important; color: white; }
+
+.menu-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--altura-menu-superior);
+    z-index: 1000;
+}
+
+.forma-azul, .forma-rosa 
+{ 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.forma-azul 
+{
+    background-color: var(--azul-primario);
+    z-index: 2; 
+    clip-path: polygon(
+        0% 0%, 100% 0%, 
+        100% 60%, 95% 60%, 80% 20%, 65% 20%, 55% 50%, 45% 50%, 35% 20%, 20% 20%, 5% 60%, 0% 60%
+    );
+}
+
+.forma-rosa 
+{
+    background-color: var(--rosa-primario);
+    z-index: 1; 
+    clip-path: polygon(
+        0% 60%, 5% 60%, 20% 20%, 35% 20%, 45% 50%, 55% 50%, 65% 20%, 80% 20%, 95% 60%, 100% 60%,
+        100% 75%, 95% 75%, 80% 35%, 65% 35%, 55% 65%, 45% 65%, 35% 35%, 20% 35%, 5% 75%, 0% 75%
+    );
+}
+
+.botao-central {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10; 
+    padding: 0;
+}
+
+.botao-central img 
+{
+    width: 250px;
+    height: auto;
+    display: block;
+}
+
+.avatar-container 
+{
+    background: #459CFF;
+    border-radius: 50%;
+    padding: 3px;
+    border: 3px solid white;
+    position: absolute;
+    top: 8px;
+    left: 40px; 
+    z-index: 4; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.avatar 
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+}
+
+.menu-lateral 
+{
+    text-align: center;
+    width: 135px;
+    background: linear-gradient(to bottom, #1e90ff, #0000aa);
+    height: 100vh; 
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900; 
+    box-sizing: border-box;
+    padding-top: calc(var(--altura-menu-superior) + 20px); /* Para conteúdo começar abaixo do header */
+}
+
+.menu 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.btn-custom-menu-lateral 
+{ 
+    background-color: var(--fundo-card-custom) !important; 
+    border: 2px solid white !important;
+    color: white !important;
+    border-radius: 20px !important;
+    font-size: 14px !important;
+    width: 110px !important;
+    padding: 8px 10px !important;
+    transition: background-color 0.2s ease, transform 0.2s ease !important;
+    text-decoration: none; 
+}
+
+.btn-custom-menu-lateral:hover,
+.btn-custom-menu-lateral.active 
+{ 
+    background-color: hotpink !important;
+    transform: scale(1.05) !important;
+    border-color: white !important;
+}
+
+.pokemon-img 
+{ 
+    background-color: #77b255;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 3px solid white;
+}
+
+.pokemon-img img 
+{
+    width: 70px;
+    height: 70px;
+    display: block;
+}
+
+.joystick-area 
+{
+    margin-top: auto; 
+    padding-bottom: 20px;
+}
+
+.joystick-area img 
+{
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+.conteudoPrincipal 
+{
+    width: 100%; 
+    margin-top: -30px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex; 
+    justify-content: center; 
+}
+
+.conteudoPrincipal article 
+{
+    width: 100%;
+    max-width: 1200px; 
+    padding: 20px;
+    padding-top: 80px;
+    background-color: rgba(0,0,0,0.3); 
+    border-radius: 8px;
+    position: relative;
+}
+
+.novoTimeContainer 
+{
+    position: absolute;
+    top: 20px;        
+    right: 20px;        
+    z-index: 10;       
+}
+
+#novoTimeBtn 
+{ 
+    font-family: var(--fonte-jersey); 
+}
+
+.tituloPagina 
+{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px; 
+    font-family: var(--fonte-jersey);
+    font-size: clamp(2.5rem, 5vw, 3.5rem); 
+}
+
+.timesContainer 
+{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+    color: #fff; 
+    width: 100%;
+}
+
+.time-card 
+{
+    background-color: var(--fundo-card-custom, #282828);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--azul-primario, #1e28be);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 320px;
+    max-width: calc(50% - 10px);
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+.nome-time 
+{
+    font-family: var(--fonte-jersey, sans-serif);
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--rosa-primario, #f0557c);
+    text-align: center;
+    border-bottom: 2px solid var(--azul-primario, #1e28be);
+    padding-bottom: 10px;
+}
+
+.pokemons-no-time-container 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.pokemon-no-time 
+{
+    text-align: center;
+    width: 90px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-no-time img 
+{
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    padding: 5px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.pokemon-nome-no-time 
+{
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%; 
+    color: #e0e0e0;
+}
+
+.btn-excluir-time 
+{
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    margin-top: auto; 
+    font-family: var(--fonte-arial);
+    font-weight: bold;
+}
+
+.btn-excluir-time:hover 
+{
+    background-color: #c82333;
+}
+
+.sem-times 
+{
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 1.3em;
+    color: #ccc;
+    width: 100%; 
+}
+
+@media (max-width: 768px) 
+{
+    .timesContainer 
+    {
+        gap: 15px;
+    }
+    .time-card 
+    {
+        flex-basis: calc(100% - 20px); 
+        max-width: 100%;
+        min-width: 280px; 
+    }
+    .conteudoPrincipal article 
+    {
+        padding: 15px;
+    }
+    .nome-time 
+    {
+        font-size: 1.8em;
+    }
+    .pokemon-no-time 
+    {
+        width: 80px;
+    }
+    .pokemon-no-time img 
+    {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) 
+{
+    
+    .tituloPagina {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+    .time-card {
+        padding: 15px;
+    }
+    .nome-time {
+        font-size: 1.6em;
+        margin-bottom: 15px;
+    }
+    .pokemons-no-time-container {
+        gap: 10px;
+    }
+    .pokemon-no-time {
+        width: 70px;
+    }
+    .pokemon-no-time img {
+        width: 50px;
+        height: 50px;
+    }
+    .btn-excluir-time {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    #novoTimeBtn.btn-primary, #novoTimeBtn {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+}
