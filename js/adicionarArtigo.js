@@ -3,14 +3,41 @@ document.addEventListener("DOMContentLoaded", () =>
     const form = document.getElementById("artigoForm");
 
     const fileInput = document.getElementById("imagemArtigo");
+    const tituloI = document.getElementById("tituloArtigo");
+    const resumoI = document.getElementById("resumoArtigo");
+    const conteudoI = document.getElementById("conteudoArtigo");
+    const tituloPagina = document.querySelector('h2');
+
+    let editandoIndice = null;
+
+    const indiceParaEditar = localStorage.getItem("editandoArtigoIndice");
+    if(indiceParaEditar !== null)
+    {
+        const artigos = JSON.parse(localStorage.getItem("artigos")) || [];
+        const artigoEditar = artigos[indiceParaEditar];
+
+        if(artigoEditar)
+        {
+            tituloI.value = artigoEditar.titulo;
+            resumoI.value = artigoEditar.resumo;
+            conteudoI.value = artigoEditar.conteudo;
+
+            tituloPagina.textContent = "Editar Artigo";
+            editandoIndice = parseInt(indiceParaEditar);
+        }
+        else
+        {
+            localStorage.removeItem("editandoArtigoIndice");
+        }
+    }
 
     form.addEventListener("submit", (e) => 
     {
         e.preventDefault();
 
-        const titulo = document.getElementById("tituloArtigo").value.trim();
-        const resumo = document.getElementById("resumoArtigo").value.trim();
-        const conteudo = document.getElementById("conteudoArtigo").value.trim();
+        const titulo = tituloI.value.trim();
+        const resumo = resumoI.value.trim();
+        const conteudo = conteudoI.value.trim();
 
         if(!titulo || !resumo || !conteudo)
         {
@@ -26,14 +53,23 @@ document.addEventListener("DOMContentLoaded", () =>
                 conteudo,
                 imagem: dataURL
             };
-            const artigos = JSON.parse(localStorage.getItem("artigos")) || [];
-            artigos.push(novoArtigo);
+            let artigos = JSON.parse(localStorage.getItem("artigos")) || [];
+
+            if(editandoIndice !== null)
+            {
+                artigos[editandoIndice] = novoArtigo;
+                localStorage.removeItem("editandoArtigoIndice");
+            }
+            else
+            {
+                artigos.push(novoArtigo);
+            }
+
             localStorage.setItem("artigos", JSON.stringify(artigos));
             window.location.href = "artigos.html";
         };
 
-
-        if(fileInput.files && fileInput.files[0])
+        if(fileInput.files && fileInput.files[0])//precisa dar uma olhada melhor pra entender melhor isso
         {
             const reader = new FileReader();
             reader.onload = () => salvarArtigo(reader.result);
@@ -42,7 +78,14 @@ document.addEventListener("DOMContentLoaded", () =>
         }
         else
         {
-            salvarArtigo("../img/Mew.jpeg");
+            if(editandoIndice !== null && artigos[editandoIndice] && artigos[editandoIndice].imagem)
+            {
+                salvarArtigo(artigos[editandoIndice].imagem);
+            }
+            else
+            {
+                salvarArtigo("../img/Mew.jpeg");
+            }
         }
 
     });
