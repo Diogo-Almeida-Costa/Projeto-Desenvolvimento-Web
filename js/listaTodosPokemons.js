@@ -1,88 +1,233 @@
-// js/listaTodosPokemons.js
 import { TipoPokemon } from './TipoPokemon.js';
-import { Pokemon } from './Pokemon.js'; // Importa a classe Pokemon
+import { Pokemon } from './Pokemon.js';
 
-// Suas instâncias de Pokémon
-const bulbasaur = new Pokemon(
-    "1", "Bulbasaur", TipoPokemon.GRAMA, TipoPokemon.VENENO, "0.7 m", "6.9 kg",
-    ["Overgrow", "Chlorophyll"],
-    "Bulbasaur é um Pokémon do tipo planta/veneno. Ele é conhecido por sua habilidade de absorver luz solar e crescer.",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-);
-
-const ivysaur = new Pokemon(
-    "2", "Ivysaur", TipoPokemon.GRAMA, TipoPokemon.VENENO, "1.0 m", "13.0 kg",
-    ["Overgrow", "Chlorophyll"],
-    "Ivysaur é a forma evoluída de Bulbasaur, com uma planta maior em suas costas.",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
-);
-
-const venusaur = new Pokemon(
-    "3", "Venusaur", TipoPokemon.GRAMA, TipoPokemon.VENENO, "2.0 m", "100.0 kg",
-    ["Overgrow", "Chlorophyll"],
-    "Venusaur é a forma final de Bulbasaur, com uma grande flor em suas costas.",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
-);
-
-const charmander = new Pokemon(
-    "4", "Charmander", TipoPokemon.FOGO, null, "0.6 m", "8.5 kg",
-    ["Blaze", "Solar Power"],
-    "Charmander é um Pokémon do tipo fogo, conhecido por sua chama na cauda.",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
-);
-
-const charmeleon = new Pokemon(
-    "5", "Charmeleon", TipoPokemon.FOGO, null, "1.1 m", "19.0 kg",
-    ["Blaze", "Solar Power"],
-    "Charmeleon é a forma evoluída de Charmander, mais agressivo e com uma chama maior.",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
-);
-
-const charizard = new Pokemon(
-    "6", "Charizard", TipoPokemon.FOGO, TipoPokemon.VOADOR, "1.7 m", "90.5 kg",
-    ["Blaze", "Solar Power"],
-    "Charizard é a forma final de Charmander, capaz de voar e soltar chamas poderosas.",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
-);
-
-const squirtle = new Pokemon(
-    "7", "Squirtle", TipoPokemon.AGUA, null, "0.5 m", "9.0 kg",
-    ["Torrent", "Rain Dish"],
-    "Squirtle é um Pokémon do tipo água, conhecido por sua carapaça dura.",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
-);
-
-const wartortle = new Pokemon(
-    "8", "Wartortle", TipoPokemon.AGUA, null, "1.0 m", "22.5 kg",
-    ["Torrent", "Rain Dish"],
-    "Wartortle é a forma evoluída de Squirtle, com orelhas maiores e uma cauda mais longa.",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
-);
-
-const blastoise = new Pokemon(
-    "9", "Blastoise", TipoPokemon.AGUA, null, "1.6 m", "85.5 kg",
-    ["Torrent", "Rain Dish"],
-    "Blastoise é a forma final de Squirtle, com canhões de água em suas costas.",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
-);
-
-const pikachu = new Pokemon(
-    "25", "Pikachu", TipoPokemon.ELETRICO, null, "0.4 m", "6.0 kg",
-    ["Static", "Lightning Rod"],
-    "Pikachu é um Pokémon do tipo elétrico, conhecido por sua habilidade de gerar eletricidade.",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
-);
-
-const raichu = new Pokemon(
-    "26", "Raichu", TipoPokemon.ELETRICO, null, "0.8 m", "30.0 kg",
-    ["Static", "Lightning Rod"],
-    "Raichu é a forma evoluída de Pikachu, com uma cauda longa e mais eletricidade.",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png"
-);
+const bulbasaur = new Pokemon("1", "Bulbasaur", TipoPokemon.GRAMA, TipoPokemon.VENENO, "0.7 m", "6.9 kg", ["Overgrow", "Chlorophyll"], "Bulbasaur é um Pokémon do tipo planta/veneno. Ele é conhecido por sua habilidade de absorver luz solar e crescer.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png");
+const ivysaur = new Pokemon("2", "Ivysaur", TipoPokemon.GRAMA, TipoPokemon.VENENO, "1.0 m", "13.0 kg", ["Overgrow", "Chlorophyll"], "Ivysaur é a forma evoluída de Bulbasaur, com uma planta maior em suas costas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png");
+const venusaur = new Pokemon("3", "Venusaur", TipoPokemon.GRAMA, TipoPokemon.VENENO, "2.0 m", "100.0 kg", ["Overgrow", "Chlorophyll"], "Venusaur é a forma final de Bulbasaur, com uma grande flor em suas costas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png");
+const charmander = new Pokemon("4", "Charmander", TipoPokemon.FOGO, null, "0.6 m", "8.5 kg", ["Blaze", "Solar Power"], "Charmander é um Pokémon do tipo fogo, conhecido por sua chama na cauda.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png");
+const charmeleon = new Pokemon("5", "Charmeleon", TipoPokemon.FOGO, null, "1.1 m", "19.0 kg", ["Blaze", "Solar Power"], "Charmeleon é a forma evoluída de Charmander, mais agressivo e com uma chama maior.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png");
+const charizard = new Pokemon("6", "Charizard", TipoPokemon.FOGO, TipoPokemon.VOADOR, "1.7 m", "90.5 kg", ["Blaze", "Solar Power"], "Charizard é a forma final de Charmander, capaz de voar e soltar chamas poderosas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png");
+const squirtle = new Pokemon("7", "Squirtle", TipoPokemon.AGUA, null, "0.5 m", "9.0 kg", ["Torrent", "Rain Dish"], "Squirtle é um Pokémon do tipo água, conhecido por sua carapaça dura.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png");
+const wartortle = new Pokemon("8", "Wartortle", TipoPokemon.AGUA, null, "1.0 m", "22.5 kg", ["Torrent", "Rain Dish"], "Wartortle é a forma evoluída de Squirtle, com orelhas maiores e uma cauda mais longa.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png");
+const blastoise = new Pokemon("9", "Blastoise", TipoPokemon.AGUA, null, "1.6 m", "85.5 kg", ["Torrent", "Rain Dish"], "Blastoise é a forma final de Squirtle, com canhões de água em suas costas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png");
+const caterpie = new Pokemon("10", "Caterpie", TipoPokemon.INSETO, null, "0.3 m", "2.9 kg", ["Shield Dust", "Run Away"], "Caterpie é um Pokémon do tipo inseto, conhecido por sua simplicidade e a capacidade de se transformar.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png");
+const metapod = new Pokemon("11", "Metapod", TipoPokemon.INSETO, null, "0.7 m", "9.9 kg", ["Shed Skin"], "Metapod é a forma evoluída de Caterpie, protegendo-se em uma casca dura enquanto espera evoluir.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png");
+const butterfree = new Pokemon("12", "Butterfree", TipoPokemon.INSETO, TipoPokemon.VOADOR, "1.1 m", "32.0 kg", ["Compound Eyes", "Tinted Lens"], "Butterfree é a forma final de Caterpie, uma borboleta graciosa com habilidades de voo.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png");
+const weedle = new Pokemon("13", "Weedle", TipoPokemon.INSETO, TipoPokemon.VENENO, "0.3 m", "3.2 kg", ["Shield Dust", "Run Away"], "Weedle é um Pokémon do tipo inseto/veneno, com um ferrão na cabeça.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png");
+const kakuna = new Pokemon("14", "Kakuna", TipoPokemon.INSETO, TipoPokemon.VENENO, "0.6 m", "10.0 kg", ["Shed Skin"], "Kakuna é a forma evoluída de Weedle, uma casca dura que espera a evolução.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png");
+const beedrill = new Pokemon("15", "Beedrill", TipoPokemon.INSETO, TipoPokemon.VENENO, "1.0 m", "29.5 kg", ["Swarm", "Sniper"], "Beedrill é a forma final de Weedle, uma abelha agressiva com grandes ferrões.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png");
+const pidgey = new Pokemon("16", "Pidgey", TipoPokemon.NORMAL, TipoPokemon.VOADOR, "0.3 m", "1.8 kg", ["Keen Eye", "Tangled Feet", "Big Pecks"], "Pidgey é um Pokémon do tipo normal/voador, comum em várias áreas, com boa visão.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png");
+const pidgeotto = new Pokemon("17", "Pidgeotto", TipoPokemon.NORMAL, TipoPokemon.VOADOR, "1.1 m", "30.0 kg", ["Keen Eye", "Tangled Feet", "Big Pecks"], "Pidgeotto é a forma evoluída de Pidgey, um voador forte e territorial.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png");
+const pidgeot = new Pokemon("18", "Pidgeot", TipoPokemon.NORMAL, TipoPokemon.VOADOR, "1.5 m", "39.5 kg", ["Keen Eye", "Tangled Feet", "Big Pecks"], "Pidgeot é a forma final de Pidgey, um grande pássaro com asas poderosas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png");
+const rattata = new Pokemon("19", "Rattata", TipoPokemon.NORMAL, null, "0.3 m", "3.5 kg", ["Run Away", "Guts", "Hustle"], "Rattata é um Pokémon do tipo normal, pequeno e rápido, encontrado em muitos lugares.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png");
+const raticate = new Pokemon("20", "Raticate", TipoPokemon.NORMAL, null, "0.7 m", "18.5 kg", ["Run Away", "Guts", "Hustle"], "Raticate é a forma evoluída de Rattata, maior e com dentes afiados.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png");
+const spearow = new Pokemon("21", "Spearow", TipoPokemon.NORMAL, TipoPokemon.VOADOR, "0.3 m", "2.0 kg", ["Keen Eye", "Sniper"], "Spearow é um Pokémon do tipo normal/voador, pequeno e agressivo, com um bico afiado.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png");
+const fearow = new Pokemon("22", "Fearow", TipoPokemon.NORMAL, TipoPokemon.VOADOR, "1.2 m", "38.0 kg", ["Keen Eye", "Sniper"], "Fearow é a forma evoluída de Spearow, um pássaro grande com um pescoço longo.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png");
+const ekans = new Pokemon("23", "Ekans", TipoPokemon.VENENO, null, "2.0 m", "6.9 kg", ["Intimidate", "Shed Skin", "Unburden"], "Ekans é um Pokémon do tipo veneno, conhecido por seu corpo comprido e veneno forte.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png");
+const arbok = new Pokemon("24", "Arbok", TipoPokemon.VENENO, null, "3.5 m", "65.0 kg", ["Intimidate", "Shed Skin", "Unburden"], "Arbok é a forma evoluída de Ekans, uma cobra grande e intimidadora.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png");
+const pikachu = new Pokemon("25", "Pikachu", TipoPokemon.ELETRICO, null, "0.4 m", "6.0 kg", ["Static", "Lightning Rod"], "Pikachu é um Pokémon do tipo elétrico, conhecido por sua habilidade de gerar eletricidade.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png");
+const raichu = new Pokemon("26", "Raichu", TipoPokemon.ELETRICO, null, "0.8 m", "30.0 kg", ["Static", "Lightning Rod"], "Raichu é a forma evoluída de Pikachu, com uma cauda longa e mais eletricidade.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png");
+const sandshrew = new Pokemon("27", "Sandshrew", TipoPokemon.TERRA, null, "0.6 m", "12.0 kg", ["Sand Veil", "Sand Rush"], "Sandshrew é um Pokémon do tipo terra, conhecido por sua pele dura e enrolar-se em bola.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png");
+const sandslash = new Pokemon("28", "Sandslash", TipoPokemon.TERRA, null, "1.0 m", "29.5 kg", ["Sand Veil", "Sand Rush"], "Sandslash é a forma evoluída de Sandshrew, com garras afiadas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png");
+const nidoran_f = new Pokemon("29", "Nidoran♀", TipoPokemon.VENENO, null, "0.4 m", "7.0 kg", ["Poison Point", "Rivalry", "Hustle"], "Nidoran♀ é um Pokémon do tipo veneno, fêmea, com espinhos e veneno.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png");
+const nidorina = new Pokemon("30", "Nidorina", TipoPokemon.VENENO, null, "0.8 m", "20.0 kg", ["Poison Point", "Rivalry", "Hustle"], "Nidorina é a forma evoluída de Nidoran♀, mais forte e com mais espinhos.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png");
+const nidoqueen = new Pokemon("31", "Nidoqueen", TipoPokemon.VENENO, TipoPokemon.TERRA, "1.3 m", "60.0 kg", ["Poison Point", "Rivalry", "Sheer Force"], "Nidoqueen é a forma final de Nidoran♀, uma rainha poderosa e protetora.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png");
+const nidoran_m = new Pokemon("32", "Nidoran♂", TipoPokemon.VENENO, null, "0.5 m", "9.0 kg", ["Poison Point", "Rivalry", "Hustle"], "Nidoran♂ é um Pokémon do tipo veneno, macho, com chifres e veneno.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png");
+const nidorino = new Pokemon("33", "Nidorino", TipoPokemon.VENENO, null, "0.9 m", "19.5 kg", ["Poison Point", "Rivalry", "Hustle"], "Nidorino é a forma evoluída de Nidoran♂, mais forte e com chifres maiores.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png");
+const nidoking = new Pokemon("34", "Nidoking", TipoPokemon.VENENO, TipoPokemon.TERRA, "1.4 m", "62.0 kg", ["Poison Point", "Rivalry", "Sheer Force"], "Nidoking é a forma final de Nidoran♂, um rei poderoso e agressivo.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png");
+const clefairy = new Pokemon("35", "Clefairy", TipoPokemon.FADA, null, "0.6 m", "7.5 kg", ["Cute Charm", "Magic Guard", "Friend Guard"], "Clefairy é um Pokémon do tipo fada, conhecido por sua fofura e poderes lunares.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png");
+const clefable = new Pokemon("36", "Clefable", TipoPokemon.FADA, null, "1.3 m", "40.0 kg", ["Cute Charm", "Magic Guard", "Unaware"], "Clefable é a forma evoluída de Clefairy, uma fada ainda mais poderosa.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png");
+const vulpix = new Pokemon("37", "Vulpix", TipoPokemon.FOGO, null, "0.6 m", "9.9 kg", ["Flash Fire", "Drought"], "Vulpix é um Pokémon do tipo fogo, conhecido por suas seis caudas e pelo fogo que pode soltar.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png");
+const ninetales = new Pokemon("38", "Ninetales", TipoPokemon.FOGO, null, "1.1 m", "19.9 kg", ["Flash Fire", "Drought"], "Ninetales é a forma evoluída de Vulpix, com nove caudas e poderes místicos.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png");
+const jigglypuff = new Pokemon("39", "Jigglypuff", TipoPokemon.NORMAL, TipoPokemon.FADA, "0.5 m", "5.5 kg", ["Cute Charm", "Competitive", "Friend Guard"], "Jigglypuff é um Pokémon do tipo normal/fada, conhecido por sua voz suave e habilidade de fazer dormir.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png");
+const wigglytuff = new Pokemon("40", "Wigglytuff", TipoPokemon.NORMAL, TipoPokemon.FADA, "1.0 m", "12.0 kg", ["Cute Charm", "Competitive", "Frisk"], "Wigglytuff é a forma evoluída de Jigglypuff, mais forte e com uma voz mais potente.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png");
+const zubat = new Pokemon("41", "Zubat", TipoPokemon.VENENO, TipoPokemon.VOADOR, "0.8 m", "7.5 kg", ["Inner Focus", "Infiltrator"], "Zubat é um Pokémon do tipo veneno/voador, comum em cavernas, com boa audição.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png");
+const golbat = new Pokemon("42", "Golbat", TipoPokemon.VENENO, TipoPokemon.VOADOR, "1.6 m", "55.0 kg", ["Inner Focus", "Infiltrator"], "Golbat é a forma evoluída de Zubat, maior e com grandes presas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png");
+const oddish = new Pokemon("43", "Oddish", TipoPokemon.GRAMA, TipoPokemon.VENENO, "0.5 m", "5.4 kg", ["Chlorophyll", "Run Away"], "Oddish é um Pokémon do tipo planta/veneno, que cresce no escuro e absorve nutrientes da terra.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png");
+const gloom = new Pokemon("44", "Gloom", TipoPokemon.GRAMA, TipoPokemon.VENENO, "0.8 m", "8.6 kg", ["Chlorophyll", "Stench"], "Gloom é a forma evoluída de Oddish, com um cheiro forte e um botão em sua cabeça.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png");
+const vileplume = new Pokemon("45", "Vileplume", TipoPokemon.GRAMA, TipoPokemon.VENENO, "1.2 m", "18.6 kg", ["Chlorophyll", "Effect Spore"], "Vileplume é a forma final de Oddish, com uma grande flor que libera pólen venenoso.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png");
+const paras = new Pokemon("46", "Paras", TipoPokemon.INSETO, TipoPokemon.GRAMA, "0.3 m", "5.4 kg", ["Effect Spore", "Dry Skin", "Damp"], "Paras é um Pokémon do tipo inseto/planta, com fungos que crescem em suas costas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png");
+const parasect = new Pokemon("47", "Parasect", TipoPokemon.INSETO, TipoPokemon.GRAMA, "1.0 m", "29.5 kg", ["Effect Spore", "Dry Skin", "Damp"], "Parasect é a forma evoluída de Paras, com os fungos maiores e controlando o Pokémon.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png");
+const venonat = new Pokemon("48", "Venonat", TipoPokemon.INSETO, TipoPokemon.VENENO, "1.0 m", "30.0 kg", ["Compound Eyes", "Tinted Lens", "Run Away"], "Venonat é um Pokémon do tipo inseto/veneno, com olhos grandes que podem ver no escuro.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png");
+const venomoth = new Pokemon("49", "Venomoth", TipoPokemon.INSETO, TipoPokemon.VENENO, "1.5 m", "12.5 kg", ["Shield Dust", "Tinted Lens", "Wonder Skin"], "Venomoth é a forma evoluída de Venonat, uma mariposa com asas venenosas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png");
+const diglett = new Pokemon("50", "Diglett", TipoPokemon.TERRA, null, "0.2 m", "0.8 kg", ["Sand Veil", "Arena Trap", "Sand Force"], "Diglett é um Pokémon do tipo terra, conhecido por viver no subsolo e aparecer rapidamente.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png");
+const dugtrio = new Pokemon("51", "Dugtrio", TipoPokemon.TERRA, null, "0.7 m", "33.3 kg", ["Sand Veil", "Arena Trap", "Sand Force"], "Dugtrio é a forma evoluída de Diglett, com três cabeças que se movem em sincronia.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png");
+const meowth = new Pokemon("52", "Meowth", TipoPokemon.NORMAL, null, "0.4 m", "4.2 kg", ["Pickup", "Technician", "Unnerve"], "Meowth é um Pokémon do tipo normal, conhecido por sua moeda na testa e paixão por coisas brilhantes.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png");
+const persian = new Pokemon("53", "Persian", TipoPokemon.NORMAL, null, "1.0 m", "32.0 kg", ["Limber", "Technician", "Unnerve"], "Persian é a forma evoluída de Meowth, um gato elegante e orgulhoso.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png");
+const psyduck = new Pokemon("54", "Psyduck", TipoPokemon.AGUA, null, "0.8 m", "19.5 kg", ["Damp", "Cloud Nine", "Swift Swim"], "Psyduck é um Pokémon do tipo água, com dores de cabeça que liberam poderes psíquicos.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png");
+const golduck = new Pokemon("55", "Golduck", TipoPokemon.AGUA, null, "1.7 m", "76.6 kg", ["Damp", "Cloud Nine", "Swift Swim"], "Golduck é a forma evoluída de Psyduck, com habilidades psíquicas mais controladas e poderosas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png");
+const mankey = new Pokemon("56", "Mankey", TipoPokemon.LUTADOR, null, "0.5 m", "28.0 kg", ["Vital Spirit", "Anger Point", "Defiant"], "Mankey é um Pokémon do tipo lutador, conhecido por seu temperamento explosivo.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png");
+const primeape = new Pokemon("57", "Primeape", TipoPokemon.LUTADOR, null, "1.0 m", "32.0 kg", ["Vital Spirit", "Anger Point", "Defiant"], "Primeape é a forma evoluída de Mankey, ainda mais agressivo e com raiva constante.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png");
+const growlithe = new Pokemon("58", "Growlithe", TipoPokemon.FOGO, null, "0.7 m", "19.2 kg", ["Intimidate", "Flash Fire", "Justified"], "Growlithe é um Pokémon do tipo fogo, conhecido por sua lealdade e latidos poderosos.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png");
+const arcanine = new Pokemon("59", "Arcanine", TipoPokemon.FOGO, null, "1.9 m", "155.0 kg", ["Intimidate", "Flash Fire", "Justified"], "Arcanine é a forma evoluída de Growlithe, um Pokémon lendário com grande velocidade e poder.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png");
+const poliwag = new Pokemon("60", "Poliwag", TipoPokemon.AGUA, null, "0.6 m", "12.4 kg", ["Water Absorb", "Damp", "Swift Swim"], "Poliwag é um Pokémon do tipo água, com uma espiral em sua barriga que indica o caminho.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png");
+const poliwhirl = new Pokemon("61", "Poliwhirl", TipoPokemon.AGUA, null, "1.0 m", "20.0 kg", ["Water Absorb", "Damp", "Swift Swim"], "Poliwhirl é a forma evoluída de Poliwag, mais atlético e com uma espiral mais proeminente.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png");
+const poliwrath = new Pokemon("62", "Poliwrath", TipoPokemon.AGUA, TipoPokemon.LUTADOR, "1.3 m", "54.0 kg", ["Water Absorb", "Damp", "Swift Swim"], "Poliwrath é a forma final de Poliwag, um lutador poderoso com braços fortes.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png");
+const abra = new Pokemon("63", "Abra", TipoPokemon.PSQUICO, null, "0.9 m", "19.5 kg", ["Synchronize", "Inner Focus", "Magic Guard"], "Abra é um Pokémon do tipo psíquico, que dorme a maior parte do tempo, mas pode se teletransportar.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png");
+const kadabra = new Pokemon("64", "Kadabra", TipoPokemon.PSQUICO, null, "1.3 m", "56.0 kg", ["Synchronize", "Inner Focus", "Magic Guard"], "Kadabra é a forma evoluída de Abra, com poderes psíquicos mais desenvolvidos e uma colher.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png");
+const alakazam = new Pokemon("65", "Alakazam", TipoPokemon.PSQUICO, null, "1.5 m", "48.0 kg", ["Synchronize", "Inner Focus", "Magic Guard"], "Alakazam é a forma final de Abra, um dos Pokémon psíquicos mais inteligentes e poderosos.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png");
+const machop = new Pokemon("66", "Machop", TipoPokemon.LUTADOR, null, "0.8 m", "19.5 kg", ["Guts", "No Guard", "Steadfast"], "Machop é um Pokémon do tipo lutador, conhecido por sua força e capacidade de aprender artes marciais.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png");
+const machoke = new Pokemon("67", "Machoke", TipoPokemon.LUTADOR, null, "1.5 m", "70.5 kg", ["Guts", "No Guard", "Steadfast"], "Machoke é a forma evoluída de Machop, com força ainda maior e a capacidade de usar um cinto de força.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png");
+const machamp = new Pokemon("68", "Machamp", TipoPokemon.LUTADOR, null, "1.6 m", "130.0 kg", ["Guts", "No Guard", "Steadfast"], "Machamp é a forma final de Machop, com quatro braços que pode usar para realizar ataques devastadores.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png");
+const bellsprout = new Pokemon("69", "Bellsprout", TipoPokemon.GRAMA, TipoPokemon.VENENO, "0.7 m", "4.0 kg", ["Chlorophyll", "Gluttony"], "Bellsprout é um Pokémon do tipo planta/veneno, com um corpo flexível e a capacidade de chicotear.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png");
+const weepinbell = new Pokemon("70", "Weepinbell", TipoPokemon.GRAMA, TipoPokemon.VENENO, "1.0 m", "6.4 kg", ["Chlorophyll", "Gluttony"], "Weepinbell é a forma evoluída de Bellsprout, mais forte e com um corpo mais robusto.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png");
+const victreebel = new Pokemon("71", "Victreebel", TipoPokemon.GRAMA, TipoPokemon.VENENO, "1.7 m", "15.5 kg", ["Chlorophyll", "Gluttony"], "Victreebel é a forma final de Bellsprout, com uma boca grande e a capacidade de atrair presas com seu aroma.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png");
+const tentacool = new Pokemon("72", "Tentacool", TipoPokemon.AGUA, TipoPokemon.VENENO, "0.9 m", "45.5 kg", ["Clear Body", "Liquid Ooze", "Rain Dish"], "Tentacool é um Pokémon do tipo água/veneno, com tentáculos longos e veneno.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png");
+const tentacruel = new Pokemon("73", "Tentacruel", TipoPokemon.AGUA, TipoPokemon.VENENO, "1.6 m", "55.0 kg", ["Clear Body", "Liquid Ooze", "Rain Dish"], "Tentacruel é a forma evoluída de Tentacool, com mais tentáculos e um veneno mais potente.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png");
+const geodude = new Pokemon("74", "Geodude", TipoPokemon.PEDRA, TipoPokemon.TERRA, "0.4 m", "20.0 kg", ["Rock Head", "Sturdy", "Sand Veil"], "Geodude é um Pokémon do tipo pedra/terra, com braços fortes e uma cabeça dura.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png");
+const graveler = new Pokemon("75", "Graveler", TipoPokemon.PEDRA, TipoPokemon.TERRA, "1.0 m", "105.0 kg", ["Rock Head", "Sturdy", "Sand Veil"], "Graveler é a forma evoluída de Geodude, maior e com braços mais fortes.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png");
+const golem = new Pokemon("76", "Golem", TipoPokemon.PEDRA, TipoPokemon.TERRA, "1.4 m", "300.0 kg", ["Rock Head", "Sturdy", "Sand Veil"], "Golem é a forma final de Geodude, um Pokémon de pedra poderoso e resistente.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png");
+const ponyta = new Pokemon("77", "Ponyta", TipoPokemon.FOGO, null, "1.0 m", "30.0 kg", ["Run Away", "Flash Fire", "Flame Body"], "Ponyta é um Pokémon do tipo fogo, um pequeno cavalo com uma crina flamejante.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png");
+const rapidash = new Pokemon("78", "Rapidash", TipoPokemon.FOGO, null, "1.7 m", "95.0 kg", ["Run Away", "Flash Fire", "Flame Body"], "Rapidash é a forma evoluída de Ponyta, um cavalo veloz com chamas ainda mais intensas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png");
+const slowpoke = new Pokemon("79", "Slowpoke", TipoPokemon.AGUA, TipoPokemon.PSQUICO, "1.2 m", "36.0 kg", ["Oblivious", "Own Tempo", "Regenerator"], "Slowpoke é um Pokémon do tipo água/psíquico, lento e com pouca inteligência, mas pode evoluir.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png");
+const slowbro = new Pokemon("80", "Slowbro", TipoPokemon.AGUA, TipoPokemon.PSQUICO, "1.6 m", "78.5 kg", ["Oblivious", "Own Tempo", "Regenerator"], "Slowbro é a forma evoluída de Slowpoke, com um Shellder preso em sua cauda, o que o torna mais inteligente.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png");
+const magnemite = new Pokemon("81", "Magnemite", TipoPokemon.ELETRICO, TipoPokemon.ACO, "0.3 m", "6.0 kg", ["Magnet Pull", "Sturdy", "Analytic"], "Magnemite é um Pokémon do tipo elétrico/aço, com ímãs que o fazem levitar.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png");
+const magneton = new Pokemon("82", "Magneton", TipoPokemon.ELETRICO, TipoPokemon.ACO, "1.0 m", "60.0 kg", ["Magnet Pull", "Sturdy", "Analytic"], "Magneton é a forma evoluída de Magnemite, formado por três Magnemite unidos, com maior poder elétrico.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png");
+const farfetchd = new Pokemon("83", "Farfetch'd", TipoPokemon.NORMAL, TipoPokemon.VOADOR, "0.8 m", "15.0 kg", ["Keen Eye", "Inner Focus", "Defiant"], "Farfetch'd é um Pokémon do tipo normal/voador, que sempre carrega um talo de cebola.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png");
+const doduo = new Pokemon("84", "Doduo", TipoPokemon.NORMAL, TipoPokemon.VOADOR, "1.4 m", "39.2 kg", ["Run Away", "Early Bird", "Tangling Hair"], "Doduo é um Pokémon do tipo normal/voador, com duas cabeças que pensam independentemente.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png");
+const dodrio = new Pokemon("85", "Dodrio", TipoPokemon.NORMAL, TipoPokemon.VOADOR, "1.8 m", "85.2 kg", ["Run Away", "Early Bird", "Tangling Hair"], "Dodrio é a forma evoluída de Doduo, com três cabeças, cada uma com sua própria personalidade.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png");
+const seel = new Pokemon("86", "Seel", TipoPokemon.AGUA, null, "1.1 m", "90.0 kg", ["Thick Fat", "Hydration", "Ice Body"], "Seel é um Pokémon do tipo água, com uma pele branca e a capacidade de viver em águas geladas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png");
+const dewgong = new Pokemon("87", "Dewgong", TipoPokemon.AGUA, TipoPokemon.GELO, "1.7 m", "120.0 kg", ["Thick Fat", "Hydration", "Ice Body"], "Dewgong é a forma evoluída de Seel, uma foca elegante com uma pele branca e a capacidade de nadar rapidamente em águas frias.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png");
+const grimer = new Pokemon("88", "Grimer", TipoPokemon.VENENO, null, "0.9 m", "30.0 kg", ["Stench", "Sticky Hold", "Poison Touch"], "Grimer é um Pokémon do tipo veneno, feito de lodo e conhecido por seu cheiro desagradável.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png");
+const muk = new Pokemon("89", "Muk", TipoPokemon.VENENO, null, "1.2 m", "30.0 kg", ["Stench", "Sticky Hold", "Poison Touch"], "Muk é a forma evoluída de Grimer, uma massa maior de lodo venenoso e um cheiro ainda mais forte.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png");
+const shellder = new Pokemon("90", "Shellder", TipoPokemon.AGUA, null, "0.3 m", "4.0 kg", ["Shell Armor", "Skill Link", "Overcoat"], "Shellder é um Pokémon do tipo água, que se protege em uma concha dura e pode usar sua língua como arma.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png");
+const cloyster = new Pokemon("91", "Cloyster", TipoPokemon.AGUA, TipoPokemon.GELO, "1.5 m", "132.5 kg", ["Shell Armor", "Skill Link", "Evasion"], "Cloyster é a forma evoluída de Shellder, com uma concha ainda mais dura e poderosos ataques de água e gelo.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png");
+const gastly = new Pokemon("92", "Gastly", TipoPokemon.FANTASMA, TipoPokemon.VENENO, "1.3 m", "0.1 kg", ["Levitate"], "Gastly é um Pokémon do tipo fantasma/veneno, feito de gás e conhecido por seu riso sinistro.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png");
+const haunter = new Pokemon("93", "Haunter", TipoPokemon.FANTASMA, TipoPokemon.VENENO, "1.6 m", "0.1 kg", ["Levitate"], "Haunter é a forma evoluída de Gastly, mais etéreo e com mãos que podem paralisar o oponente.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png");
+const gengar = new Pokemon("94", "Gengar", TipoPokemon.FANTASMA, TipoPokemon.VENENO, "1.5 m", "40.5 kg", ["Cursed Body", "Shadow Tag"], "Gengar é a forma final de Gastly, um Pokémon fantasma poderoso e travesso, capaz de se esconder nas sombras.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png");
+const onix = new Pokemon("95", "Onix", TipoPokemon.PEDRA, TipoPokemon.TERRA, "8.8 m", "210.0 kg", ["Rock Head", "Sturdy", "Weak Armor"], "Onix é um Pokémon do tipo pedra/terra, um gigante feito de rochas e conhecido por sua força e resistência.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png");
+const drowzee = new Pokemon("96", "Drowzee", TipoPokemon.PSQUICO, null, "1.0 m", "32.4 kg", ["Insomnia", "Forewarn", "Inner Focus"], "Drowzee é um Pokémon do tipo psíquico, que se alimenta de sonhos e pode causar pesadelos.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png");
+const hypno = new Pokemon("97", "Hypno", TipoPokemon.PSQUICO, null, "1.6 m", "75.6 kg", ["Insomnia", "Forewarn", "Inner Focus"], "Hypno é a forma evoluída de Drowzee, com um pêndulo que usa para hipnotizar e se alimentar de sonhos.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png");
+const krabby = new Pokemon("98", "Krabby", TipoPokemon.AGUA, null, "0.4 m", "6.5 kg", ["Hyper Cutter", "Shell Armor", "Sheer Force"], "Krabby é um Pokémon do tipo água, um caranguejo com garras fortes e a capacidade de lançar bolhas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png");
+const kingler = new Pokemon("99", "Kingler", TipoPokemon.AGUA, null, "1.3 m", "60.0 kg", ["Hyper Cutter", "Shell Armor", "Sheer Force"], "Kingler é a forma evoluída de Krabby, um caranguejo gigante com uma garra enorme e poderosa.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png");
+const voltorb = new Pokemon("100", "Voltorb", TipoPokemon.ELETRICO, null, "0.5 m", "10.4 kg", ["Soundproof", "Static", "Aftermath"], "Voltorb é um Pokémon do tipo elétrico, que se parece com uma Pokébola e pode explodir.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png");
+const electrode = new Pokemon("101", "Electrode", TipoPokemon.ELETRICO, null, "1.2 m", "66.6 kg", ["Soundproof", "Static", "Aftermath"], "Electrode é a forma evoluída de Voltorb, ainda mais rápido e com um poder de explosão maior.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png");
+const exeggcute = new Pokemon("102", "Exeggcute", TipoPokemon.GRAMA, TipoPokemon.PSQUICO, "0.4 m", "2.5 kg", ["Chlorophyll", "Harvest"], "Exeggcute é um Pokémon do tipo planta/psíquico, um aglomerado de ovos que se comunicam telepaticamente.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png");
+const exeggutor = new Pokemon("103", "Exeggutor", TipoPokemon.GRAMA, TipoPokemon.PSQUICO, "2.2 m", "120.0 kg", ["Chlorophyll", "Harvest"], "Exeggutor é a forma evoluída de Exeggcute, uma palmeira com várias cabeças, cada uma com sua própria consciência.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png");
+const cubone = new Pokemon("104", "Cubone", TipoPokemon.TERRA, null, "0.4 m", "6.5 kg", ["Rock Head", "Lightning Rod", "Battle Armor"], "Cubone é um Pokémon do tipo terra, que sempre usa um crânio em sua cabeça e lamenta a perda de sua mãe.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png");
+const marowak = new Pokemon("105", "Marowak", TipoPokemon.TERRA, null, "1.0 m", "45.0 kg", ["Rock Head", "Lightning Rod", "Battle Armor"], "Marowak é a forma evoluída de Cubone, com um osso que usa como arma e um espírito protetor.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png");
+const hitmonlee = new Pokemon("106", "Hitmonlee", TipoPokemon.LUTADOR, null, "1.5 m", "49.8 kg", ["Limber", "Reckless", "Unburden"], "Hitmonlee é um Pokémon do tipo lutador, conhecido por suas pernas elásticas e chutes poderosos.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png");
+const hitmonchan = new Pokemon("107", "Hitmonchan", TipoPokemon.LUTADOR, null, "1.4 m", "50.2 kg", ["Keen Eye", "Iron Fist", "Inner Focus"], "Hitmonchan é um Pokémon do tipo lutador, conhecido por seus socos rápidos e técnicas de boxe.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png");
+const lickitung = new Pokemon("108", "Lickitung", TipoPokemon.NORMAL, null, "1.2 m", "65.5 kg", ["Own Tempo", "Oblivious", "Cloud Nine"], "Lickitung é um Pokémon do tipo normal, com uma língua extremamente longa e pegajosa.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png");
+const koffing = new Pokemon("109", "Koffing", TipoPokemon.VENENO, null, "0.6 m", "1.0 kg", ["Levitate", "Neutralizing Gas", "Stench"], "Koffing é um Pokémon do tipo veneno, que flutua e libera gases tóxicos.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png");
+const weezing = new Pokemon("110", "Weezing", TipoPokemon.VENENO, null, "1.2 m", "9.5 kg", ["Levitate", "Neutralizing Gas", "Stench"], "Weezing é a forma evoluída de Koffing, com duas cabeças que liberam gases ainda mais potentes.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png");
+const rhyhorn = new Pokemon("111", "Rhyhorn", TipoPokemon.TERRA, TipoPokemon.PEDRA, "1.0 m", "115.0 kg", ["Lightning Rod", "Rock Head", "Reckless"], "Rhyhorn é um Pokémon do tipo terra/pedra, com um chifre afiado e uma pele dura.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png");
+const rhydon = new Pokemon("112", "Rhydon", TipoPokemon.TERRA, TipoPokemon.PEDRA, "1.9 m", "120.0 kg", ["Lightning Rod", "Rock Head", "Reckless"], "Rhydon é a forma evoluída de Rhyhorn, um Pokémon poderoso com um chifre mais forte e a capacidade de perfurar rochas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png");
+const chansey = new Pokemon("113", "Chansey", TipoPokemon.NORMAL, null, "1.1 m", "34.6 kg", ["Natural Cure", "Serene Grace", "Healer"], "Chansey é um Pokémon do tipo normal, conhecido por carregar um ovo e sua capacidade de curar.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png");
+const tangela = new Pokemon("114", "Tangela", TipoPokemon.GRAMA, null, "1.0 m", "35.0 kg", ["Chlorophyll", "Leaf Guard", "Regenerator"], "Tangela é um Pokémon do tipo planta, feito de videiras e conhecido por seus ataques de chicote.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png");
+const kangaskhan = new Pokemon("115", "Kangaskhan", TipoPokemon.NORMAL, null, "2.2 m", "80.0 kg", ["Early Bird", "Scrappy", "Inner Focus"], "Kangaskhan é um Pokémon do tipo normal, uma mãe protetora que carrega seu filhote em uma bolsa.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png");
+const horsea = new Pokemon("116", "Horsea", TipoPokemon.AGUA, null, "0.4 m", "8.0 kg", ["Swift Swim", "Sniper", "Damp"], "Horsea é um Pokémon do tipo água, um pequeno cavalo-marinho que atira tinta.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png");
+const seadra = new Pokemon("117", "Seadra", TipoPokemon.AGUA, null, "1.2 m", "25.0 kg", ["Poison Point", "Sniper", "Damp"], "Seadra é a forma evoluída de Horsea, um cavalo-marinho mais forte e com espinhos venenosos.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png");
+const goldeen = new Pokemon("118", "Goldeen", TipoPokemon.AGUA, null, "0.6 m", "15.0 kg", ["Swift Swim", "Water Veil", "Lightning Rod"], "Goldeen é um Pokémon do tipo água, um peixe dourado com uma barbatana poderosa.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png");
+const seaking = new Pokemon("119", "Seaking", TipoPokemon.AGUA, null, "1.3 m", "39.0 kg", ["Swift Swim", "Water Veil", "Lightning Rod"], "Seaking é a forma evoluída de Goldeen, um peixe grande com um chifre na cabeça e uma barbatana poderosa.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png");
+const staryu = new Pokemon("120", "Staryu", TipoPokemon.AGUA, null, "0.8 m", "34.5 kg", ["Illuminate", "Natural Cure", "Analytic"], "Staryu é um Pokémon do tipo água, uma estrela-do-mar com uma joia vermelha em seu centro.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png");
+const starmie = new Pokemon("121", "Starmie", TipoPokemon.AGUA, TipoPokemon.PSQUICO, "1.1 m", "80.0 kg", ["Illuminate", "Natural Cure", "Analytic"], "Starmie é a forma evoluída de Staryu, uma estrela-do-mar mais poderosa com uma joia que brilha.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png");
+const mr_mime = new Pokemon("122", "Mr. Mime", TipoPokemon.PSQUICO, TipoPokemon.FADA, "1.3 m", "54.5 kg", ["Soundproof", "Filter", "Technician"], "Mr. Mime é um Pokémon do tipo psíquico/fada, conhecido por suas mímicas e barreiras invisíveis.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png");
+const scyther = new Pokemon("123", "Scyther", TipoPokemon.INSETO, TipoPokemon.VOADOR, "1.5 m", "56.0 kg", ["Swarm", "Technician", "Steadfast"], "Scyther é um Pokémon do tipo inseto/voador, com lâminas afiadas em seus braços e grande velocidade.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png");
+const jynx = new Pokemon("124", "Jynx", TipoPokemon.GELO, TipoPokemon.PSQUICO, "1.4 m", "40.6 kg", ["Oblivious", "Forewarn", "Dry Skin"], "Jynx é um Pokémon do tipo gelo/psíquico, com uma voz melodiosa e a capacidade de hipnotizar.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png");
+const electabuzz = new Pokemon("125", "Electabuzz", TipoPokemon.ELETRICO, null, "1.1 m", "30.0 kg", ["Static", "Vital Spirit"], "Electabuzz é um Pokémon do tipo elétrico, com a capacidade de gerar grandes quantidades de eletricidade.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png");
+const magmar = new Pokemon("126", "Magmar", TipoPokemon.FOGO, null, "1.3 m", "44.5 kg", ["Flame Body", "Vital Spirit"], "Magmar é um Pokémon do tipo fogo, com um corpo de lava e a capacidade de soltar chamas poderosas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png");
+const pinsir = new Pokemon("127", "Pinsir", TipoPokemon.INSETO, null, "1.5 m", "55.0 kg", ["Hyper Cutter", "Mold Breaker", "Moxie"], "Pinsir é um Pokémon do tipo inseto, com grandes chifres que usa para esmagar os oponentes.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png");
+const tauros = new Pokemon("128", "Tauros", TipoPokemon.NORMAL, null, "1.4 m", "88.4 kg", ["Intimidate", "Anger Point", "Sheer Force"], "Tauros é um Pokémon do tipo normal, um touro selvagem com três caudas e grande força.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png");
+const magikarp = new Pokemon("129", "Magikarp", TipoPokemon.AGUA, null, "0.9 m", "10.0 kg", ["Swift Swim", "Rattled"], "Magikarp é um Pokémon do tipo água, conhecido por sua fraqueza e sua habilidade de pular.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png");
+const gyarados = new Pokemon("130", "Gyarados", TipoPokemon.AGUA, TipoPokemon.VOADOR, "6.5 m", "235.0 kg", ["Intimidate", "Moxie"], "Gyarados é a forma evoluída de Magikarp, um dragão aquático poderoso e destrutivo.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png");
+const lapras = new Pokemon("131", "Lapras", TipoPokemon.AGUA, TipoPokemon.GELO, "2.5 m", "220.0 kg", ["Water Absorb", "Shell Armor", "Hydration"], "Lapras é um Pokémon do tipo água/gelo, um monstro do lago gentil que pode transportar pessoas em suas costas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png");
+const ditto = new Pokemon("132", "Ditto", TipoPokemon.NORMAL, null, "0.3 m", "4.0 kg", ["Limber", "Imposter"], "Ditto é um Pokémon do tipo normal, que pode se transformar em qualquer outro Pokémon.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png");
+const eevee = new Pokemon("133", "Eevee", TipoPokemon.NORMAL, null, "0.3 m", "6.5 kg", ["Run Away", "Adaptability", "Anticipation"], "Eevee é um Pokémon do tipo normal, conhecido por sua capacidade de evoluir para várias formas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png");
+const vaporeon = new Pokemon("134", "Vaporeon", TipoPokemon.AGUA, null, "1.0 m", "29.0 kg", ["Water Absorb", "Hydration"], "Vaporeon é uma das evoluções de Eevee, adaptado à vida aquática e com um corpo que pode se dissolver na água.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png");
+const jolteon = new Pokemon("135", "Jolteon", TipoPokemon.ELETRICO, null, "0.8 m", "24.5 kg", ["Volt Absorb", "Quick Feet"], "Jolteon é uma das evoluções de Eevee, um Pokémon elétrico com pelos afiados que podem gerar eletricidade.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png");
+const flareon = new Pokemon("136", "Flareon", TipoPokemon.FOGO, null, "0.9 m", "25.0 kg", ["Flash Fire", "Guts"], "Flareon é uma das evoluções de Eevee, um Pokémon de fogo com uma temperatura corporal muito alta e grande poder de fogo.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png");
+const porygon = new Pokemon("137", "Porygon", TipoPokemon.NORMAL, null, "0.8 m", "36.5 kg", ["Trace", "Download", "Analytic"], "Porygon é um Pokémon do tipo normal, um Pokémon virtual feito de dados e que pode se mover no ciberespaço.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png");
+const omanyte = new Pokemon("138", "Omanyte", TipoPokemon.PEDRA, TipoPokemon.AGUA, "0.4 m", "7.5 kg", ["Swift Swim", "Shell Armor", "Weak Armor"], "Omanyte é um Pokémon do tipo pedra/água, um fóssil vivo com uma concha espiral.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png");
+const omastar = new Pokemon("139", "Omastar", TipoPokemon.PEDRA, TipoPokemon.AGUA, "1.0 m", "35.0 kg", ["Swift Swim", "Shell Armor", "Weak Armor"], "Omastar é a forma evoluída de Omanyte, com uma concha maior e dentes afiados.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png");
+const kabuto = new Pokemon("140", "Kabuto", TipoPokemon.PEDRA, TipoPokemon.AGUA, "0.5 m", "11.5 kg", ["Swift Swim", "Battle Armor", "Weak Armor"], "Kabuto é um Pokémon do tipo pedra/água, um fóssil vivo com uma carapaça dura e garras afiadas.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png");
+const kabutops = new Pokemon("141", "Kabutops", TipoPokemon.PEDRA, TipoPokemon.AGUA, "1.3 m", "40.5 kg", ["Swift Swim", "Battle Armor", "Weak Armor"], "Kabutops é a forma evoluída de Kabuto, um Pokémon bípede com lâminas nos braços e grande velocidade.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png");
+const aerodactyl = new Pokemon("142", "Aerodactyl", TipoPokemon.PEDRA, TipoPokemon.VOADOR, "1.8 m", "59.0 kg", ["Rock Head", "Pressure", "Unnerve"], "Aerodactyl é um Pokémon do tipo pedra/voador, um dinossauro voador ressuscitado de um fóssil, com grande velocidade.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png");
+const snorlax = new Pokemon("143", "Snorlax", TipoPokemon.NORMAL, null, "2.1 m", "460.0 kg", ["Immunity", "Thick Fat", "Gluttony"], "Snorlax é um Pokémon do tipo normal, conhecido por dormir muito e comer grandes quantidades de comida.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png");
+const articuno = new Pokemon("144", "Articuno", TipoPokemon.GELO, TipoPokemon.VOADOR, "1.7 m", "55.4 kg", ["Pressure", "Snow Cloak"], "Articuno é um Pokémon lendário do tipo gelo/voador, um pássaro majestoso que controla o gelo.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png");
+const zapdos = new Pokemon("145", "Zapdos", TipoPokemon.ELETRICO, TipoPokemon.VOADOR, "1.6 m", "52.6 kg", ["Pressure", "Static"], "Zapdos é um Pokémon lendário do tipo elétrico/voador, um pássaro majestoso que controla a eletricidade.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png");
+const moltres = new Pokemon("146", "Moltres", TipoPokemon.FOGO, TipoPokemon.VOADOR, "2.0 m", "60.0 kg", ["Pressure", "Flame Body"], "Moltres é um Pokémon lendário do tipo fogo/voador, um pássaro majestoso que controla o fogo.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png");
+const dratini = new Pokemon("147", "Dratini", TipoPokemon.DRAGAO, null, "1.8 m", "3.3 kg", ["Shed Skin", "Marvel Scale"], "Dratini é um Pokémon do tipo dragão, uma serpente mística que vive na água e cresce rapidamente.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png");
+const dragonair = new Pokemon("148", "Dragonair", TipoPokemon.DRAGAO, null, "4.0 m", "16.5 kg", ["Shed Skin", "Marvel Scale"], "Dragonair é a forma evoluída de Dratini, uma serpente dragão mais longa e com jóias que controlam o clima.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png");
+const dragonite = new Pokemon("149", "Dragonite", TipoPokemon.DRAGAO, TipoPokemon.VOADOR, "2.2 m", "210.0 kg", ["Inner Focus", "Multiscale"], "Dragonite é a forma final de Dratini, um dragão amigável e poderoso que pode voar e é conhecido por sua bondade.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png");
+const mewtwo = new Pokemon("150", "Mewtwo", TipoPokemon.PSQUICO, null, "2.0 m", "122.0 kg", ["Pressure", "Unnerve"], "Mewtwo é um Pokémon lendário do tipo psíquico, criado por engenharia genética, com poder psíquico imenso e grande inteligência.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png");
+const mew = new Pokemon("151", "Mew", TipoPokemon.PSQUICO, null, "0.4 m", "4.0 kg", ["Synchronize"], "Mew é um Pokémon lendário do tipo psíquico, considerado o ancestral de todos os Pokémon, capaz de aprender qualquer golpe e se transformar.", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png");
 
 export const lista_pokemons = [
     bulbasaur, ivysaur, venusaur,
     charmander, charmeleon, charizard,
     squirtle, wartortle, blastoise,
-    pikachu, raichu
+    caterpie, metapod, butterfree,
+    weedle, kakuna, beedrill,
+    pidgey, pidgeotto, pidgeot,
+    rattata, raticate,
+    spearow, fearow,
+    ekans, arbok,
+    pikachu, raichu,
+    sandshrew, sandslash,
+    nidoran_f, nidorina, nidoqueen,
+    nidoran_m, nidorino, nidoking,
+    clefairy, clefable,
+    vulpix, ninetales,
+    jigglypuff, wigglytuff,
+    zubat, golbat,
+    oddish, gloom, vileplume,
+    paras, parasect,
+    venonat, venomoth,
+    diglett, dugtrio,
+    meowth, persian,
+    psyduck, golduck,
+    mankey, primeape,
+    growlithe, arcanine,
+    poliwag, poliwhirl, poliwrath,
+    abra, kadabra, alakazam,
+    machop, machoke, machamp,
+    bellsprout, weepinbell, victreebel,
+    tentacool, tentacruel,
+    geodude, graveler, golem,
+    ponyta, rapidash,
+    slowpoke, slowbro,
+    magnemite, magneton,
+    farfetchd,
+    doduo, dodrio,
+    seel, dewgong,
+    grimer, muk,
+    shellder, cloyster,
+    gastly, haunter, gengar,
+    onix,
+    drowzee, hypno,
+    krabby, kingler,
+    voltorb, electrode,
+    exeggcute, exeggutor,
+    cubone, marowak,
+    hitmonlee, hitmonchan,
+    lickitung,
+    koffing, weezing,
+    rhyhorn, rhydon,
+    chansey,
+    tangela,
+    kangaskhan,
+    horsea, seadra,
+    goldeen, seaking,
+    staryu, starmie,
+    mr_mime,
+    scyther,
+    jynx,
+    electabuzz,
+    magmar,
+    pinsir,
+    tauros,
+    magikarp, gyarados,
+    lapras,
+    ditto,
+    eevee, vaporeon, jolteon, flareon,
+    porygon,
+    omanyte, omastar,
+    kabuto, kabutops,
+    aerodactyl,
+    snorlax,
+    articuno, zapdos, moltres,
+    dratini, dragonair, dragonite,
+    mewtwo,
+    mew
 ];

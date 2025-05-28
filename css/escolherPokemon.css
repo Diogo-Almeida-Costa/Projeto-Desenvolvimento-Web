@@ -230,6 +230,8 @@ main.containerMain
 h1 
 {
     font-size: clamp(2.5rem, 5vw, 4rem); 
+    color: var(--fundo-card-custom) !important; 
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
     padding: 10px;
     text-align: center;
     font-family: var(--fonte-jersey);
