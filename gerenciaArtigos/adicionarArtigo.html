@@ -37,33 +37,35 @@
         </div>
     </aside>
 
-    <div class="container mt-5 conteudoPrincipal">
-        <h2 class="text-center text-primary mb-4"> Adicionar Novo Artigo </h2>
-        <form id="artigoForm">
-            <div class="mb-3">
-                <label for="titulo" class="form-label"> Título do Artigo </label>
-                <input type="text" class="form-control" id="tituloArtigo" required>
-            </div>
-            
-            <div class="mb-3">
-                <label for="resumo" class="form-label"> Resumo </label>
-                <textarea class="form-control" id="resumoArtigo" rows="3" required></textarea>
-            </div>
+    <main class="conteudoPrincipal container-fluid pt-3">
+        <h2 class="text-center mb-4 tituloPagina"> Adicionar Novo Artigo </h2>
+        <div class="card p-4 shadow-lg custom-form-card">
+            <form id="artigoForm">
+                <div class="mb-3">
+                    <label for="titulo" class="form-label text-white"> Título do Artigo </label>
+                    <input type="text" class="form-control" id="tituloArtigo" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="resumo" class="form-label text-white"> Resumo </label>
+                    <textarea class="form-control" id="resumoArtigo" rows="3" required></textarea>
+                </div>
 
-            <div class="mb-3">
-                <label for="conteudoArtigo" class="form-label"> Texto Completo </label>
-                <textarea class="form-control" id="conteudoArtigo" rows="6" required></textarea>
-            </div>
+                <div class="mb-3">
+                    <label for="conteudoArtigo" class="form-label text-white"> Texto Completo </label>
+                    <textarea class="form-control" id="conteudoArtigo" rows="6" required></textarea>
+                </div>
 
-            <div class="mb-3">
-                <label for="imagemArtigo" class="form-label"> Imagem do Artigo </label>
-                <input class="form-control" type="file" id="imagemArtigo" accept="imagem/">
-            </div>
+                <div class="mb-3">
+                    <label for="imagemArtigo" class="form-label text-white"> Imagem do Artigo </label>
+                    <input class="form-control" type="file" id="imagemArtigo" accept="imagem/">
+                </div>
 
-            <button type="submit" class="btn btn-success"> Salvar Artigo </button>
-            <a href="artigos.html" class="btn btn-secondary ms-2"> Cancelar </a>
-        </form>        
-    </div>
+                <button type="submit" class="btn btn-success me-2"> Salvar Artigo </button>
+                <a href="artigos.html" class="btn btn-secondary"> Cancelar </a>
+            </form>        
+        </div>
+    </main>
 
     <script src="../js/adicionarArtigo.js"></script>
 </body>
